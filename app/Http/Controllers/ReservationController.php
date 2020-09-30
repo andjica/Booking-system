@@ -34,12 +34,13 @@ class ReservationController extends Controller
             'end' =>'required'
         ]);
         
-      
+        
         $price = request()->price;
         $room = request()->roomid;
         $roomname = request()->roomname;
-        
 
+        $renters = Room::where('user_id', request()->roomid)->first();
+        $renter = $renters->id;
         //pronalazenje broja dana izmedju dva datuma
         $createdate=request()->start;
         $validdate=request()->end;
@@ -69,8 +70,9 @@ class ReservationController extends Controller
         else
         {
              
-            $rez =Reservation::create([
+            $rez = Reservation::create([
                 'user_id'=> auth()->user()->id,
+                'renter_id' => $renter,
                 'room_id'=> $room,
                 'valid_until' => $validdate,
                 'number_of_days'=> $days,

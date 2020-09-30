@@ -26,7 +26,7 @@ class FrontController extends Controller
     public function all()
     {
         
-        $rooms = Room::idDescending('created_at')
+        $rooms = Room::orderBy('created_at', 'desc')
         ->paginate(9);
         
         return view('pages.all', compact('rooms'));

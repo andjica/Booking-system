@@ -64,6 +64,7 @@ Route::group(['middleware' => ['checkrenter']], function ()
     Route::get('/rooms', 'RoomsController@index')->name('rooms');
     Route::get('/delete-room/{id}', 'RoomsController@destroy')->name('delete-room/{id}');
     Route::get('/confirmed-reservation/{id}', 'RenterController@confirmed')->name('confirmed-reservation/id');
+    Route::get('/view-res/{id}', 'RenterController@viewres')->name('view-res/id');
     Route::get('/accept-res/{id}', 'RenterController@accept')->name('accept-res/id');
     Route::get('/drop-res/{id}', 'RenterController@drop')->name('drop-res/id');
     Route::get('/on-pending/{id}', 'RenterController@pending')->name('on-pending');

@@ -276,9 +276,12 @@ class RoomsController extends Controller
         $totalPrice = request('totalPrice');
         $room_id = request('room_id');
 
+        $re = Room::where('id', $room_id)->first();
+        $renter = $re->user_id;
         $reservation = new Reservation();
 //add user id
         $reservation->user_id = auth()->user()->id;
+        $reservation->renter_id = $renter;
         $reservation->room_id = $room_id;
         $reservation->confirmed = 0;
         $reservation->name = $firstName;

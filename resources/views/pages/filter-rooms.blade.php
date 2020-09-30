@@ -94,7 +94,7 @@
                 <!-- ovde -->
                 <ul class="list-group">
                 <li class="list-group">  {{$rooms->links()}}</li>
-            </ul>
+                </ul>
             </div>
             @endif
             </div>

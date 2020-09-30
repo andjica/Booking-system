@@ -19,9 +19,6 @@ class RenterController extends Controller
 
     public function confirmed($id)
     {
-
-
-
         $reservation = Reservation::where('id', $id)->first() ?? abort(400);
         if($reservation->confirmed == 2 || $reservation->confirmed == 3)
         {
@@ -84,23 +81,89 @@ class RenterController extends Controller
         return $arrayOfDisableDates;
     }
 
+    public function viewres($id)
+    {
+        $reservation = Reservation::where('id', $id)->first() ?? abort(400);
+        
+        $roomId = $reservation->room_id;
+        $room = Room::find($roomId);
+        
+        $reservations = [];
+        $data = Reservation::where('room_id', $id)->where('confirmed', 2)->get();
+        
+        $arrayOfDisableDates =[];
+        if($data->count()){
+           foreach ($data as $key => $value) {
+
+             $reservations[] = Calendar::event(
+
+                $value->room->name,
+                $value->name,
+                 new \DateTime($value->start_date),
+
+                 new \DateTime($value->valid_until.' +1 day')
+
+             );
+
+//           stepper
+               $begin = new \DateTime($value->start_date);
+               $end = new \DateTime( $value->valid_until);
+//    without plus 1, not catched last date
+               $end = $end->modify( '+1 day' );
+               $interval = new \DateInterval('P1D');
+               $arrayOfDisableDates[]= new \DatePeriod($begin, $interval ,$end);
+
+//               protection that all dates before today are disabled
+             $arrayOfDisableDates = $this->defaultDays($arrayOfDisableDates);
+
+           }
+
+        }
+
+       $calendar = Calendar::addEvents($reservations);
+
+        if(count($arrayOfDisableDates)==0)
+//        must have this if because of the first if
+        {
+//            case when there is no reserved dates in db
+           $arrayOfDisableDates= $this->defaultDays($arrayOfDisableDates);
+        }
+        return view('renter.viewres', compact('reservation', 'room','calendar','arrayOfDisableDates'));
+    }
+
     public function reservations()
     {
         $renter = auth()->user()->id;
 
-        $rooms = Room::where('user_id', $renter)->first();
-        $id = $rooms->id;
+        $count = Reservation::where('renter_id', $renter)->count();
+
+        if($count == 0)
+        {
+            return redirect()->back()->with('success', 'There is no still any rooms for reservations');
+        }
+
+        //$rooms = Room::where('user_id', $renter)->first();
+        //$id = $rooms->id;
 
         //payed and confired by renter
-        $res2 = Reservation::where('confirmed', 2)->get();
+        $res2 = Reservation::where('confirmed', 2)
+        ->where('renter_id', $renter)->get();
 
         //payed but dropped
-        $res3 = Reservation::where('confirmed', 3)->get();
+        $res3 = Reservation::where('confirmed', 3)
+        ->where('renter_id', $renter)->get();
 
         //payed but on waiting
-        $res1 = Reservation::where('confirmed', 1)->get();
+        $res1 = Reservation::where('confirmed', 1)
+        ->where('renter_id', $renter)->get();
+        
+        
+        
+
         return view('renter.reservations', compact('rooms', 'res2', 'res3', 'res1'));
     }
+
+
 
 
     public function accept($id)
