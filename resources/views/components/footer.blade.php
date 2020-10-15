@@ -493,13 +493,7 @@ function goBack() {
     window.history.back();
   }
 </script>
-<script>
-        $(document).ready(function(){
-            $('#andjicas').click(function(){
-                alert(5);
-            });
-        });
-     </script>
+
 </body>
 
 </html>

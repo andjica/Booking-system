@@ -210,4 +210,19 @@ class RenterController extends Controller
             return abort(500);
         }
     }
+
+    public function supportteam()
+    {
+        return view('renter.supportteam');
+    }
+
+    public function supportadmin()
+    {
+        return view('renter.supportadmin');
+    }
+
+    public function supportaccount()
+    {
+        return view('renter.supporaccount');
+    }
 }

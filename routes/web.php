@@ -70,6 +70,8 @@ Route::group(['middleware' => ['checkrenter']], function ()
     Route::get('/on-pending/{id}', 'RenterController@pending')->name('on-pending');
     Route::get('/reservations', 'RenterController@reservations')->name('reservations');
     Route::get('/support-team' , 'RenterController@supportteam')->name('support-team');
+    Route::get('/support-admin', 'RenterController@supportadmin')->name('support-admin');
+    Route::get('/support-account', 'RenterController@supportaccoount')->name('support-account');
 
     //images
     Route::get('/save-image', 'ImageController@index');

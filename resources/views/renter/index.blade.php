@@ -82,7 +82,7 @@
                     <div class="card-body">
                         <h5 class="card-title">Contact Admin and Support Team <i class="fas fa-hammer"></i></h5>
                         <p class="card-text">Do you have any problem with our website platform or you need any more information. Please, contact US!</p>
-                        <button class="btn btn-success" data-toggle="modal" data-target="#support">Contact here &nbsp;<i class="fa fa-plus-square text-white"></i></button>
+                        <a href="{{route('support-team')}}" class="btn btn-success">Contact here &nbsp;<i class="fa fa-plus-square text-white"></i></a>
                     </div>
                    
                     </div>
