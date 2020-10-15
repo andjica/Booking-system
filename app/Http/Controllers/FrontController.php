@@ -28,8 +28,10 @@ class FrontController extends Controller
         
         $rooms = Room::orderBy('created_at', 'desc')
         ->paginate(9);
-        
-        return view('pages.all', compact('rooms'));
+        $cities = City::all();
+        $categories = Category::all();
+
+        return view('pages.all', compact('rooms', 'cities', 'categories'));
     }
     
 
@@ -109,7 +111,7 @@ class FrontController extends Controller
                 ->where('prize', '<=', $maxprice)
                 ->where('city_id', $city)
                 ->orderBy('created_at', 'desc')
-                ->paginate(6);
+                ->paginate(12);
                 
                 $countrooms = $rooms->count();
                 return view('pages.filter-rooms', compact('rooms', 'categories', 'cities', 'countrooms', 'categoryname', 'cityname'));
@@ -121,7 +123,7 @@ class FrontController extends Controller
                 ->where('category_id', $category)
                 ->where('city_id', $city)
                 ->orderBy('created_at', 'desc')
-                ->paginate(6);
+                ->paginate(12);
                 
                 $countrooms = $rooms->count();
                 return view('pages.filter-rooms', compact('rooms','categories', 'cities', 'countrooms', 'categoryname', 'cityname'));

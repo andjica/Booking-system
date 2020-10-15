@@ -96,3 +96,76 @@
             </div>
         </div>
     </header>
+
+    <footer class="mobile">
+		<div class="container">
+			<div class="row ">
+				<ul class="xd">
+					<li class="item-menu-mobile bb">
+					<i class="fa fa-home faks"></i>
+						<a class="lilf" href="{{asset('/products')}}">Home</a>
+					</li>
+
+					<li class="item-menu-mobile bb">
+					<i class="fa fa-shopping-bag faks"></i>
+						<a class="lilf" href="{{asset('/product-detail')}}">Shop</a>
+					</li>
+
+					<li class="item-menu-mobile bb">
+					<i class="fa fa-percent faks"></i>
+						<a class="lilf" href="{{asset('/cart')}}">Sale</a>
+					</li>
+
+					<li class="item-menu-mobile bb">
+					<i class="fa fa-tags faks"></i>
+						<a class="lilf" href="blog.html">Brands</a>
+					</li>
+
+					<li class="item-menu-mobile bb">
+					<i class="fa fa-address-card faks"></i>
+						<a class="lilf" href="{{asset('/about')}}">login</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+</footer>
+
+<style>
+@media screen and (min-width:768px){
+    .mobile{
+        display:none !important;
+    }
+}
+
+@media screen and (max-width:768px){
+    .mobile{
+        position:fixed;
+        bottom:0;
+        width:100%;
+        z-index:1000000;
+    }
+    .xd{
+		display: flex;
+        width: 100%;
+        height: 50px;
+	}
+	.bb{
+		width: 20%;
+		height: 60px;
+			text-align: center;
+		display: grid;
+		
+		background-color: grey;
+	}
+	.faks{
+		font-size: 28px;
+		padding-top: 7px;
+		height: 100%;
+		width: 100%;
+	}
+	.lilf{
+		font-weight: 700;
+		font-size: 13px;
+	}
+}
+</style>

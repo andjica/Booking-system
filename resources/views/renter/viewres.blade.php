@@ -29,15 +29,13 @@
          
         <div class="col-lg-8">
           
-        <div class="card">
-            <h5 class="card-header bg-success text-white">ID reservation is {{$reservation->id}}</h5>
-            @if($reservation->confirmed == 1)
-1
+        <div class="card"> @if($reservation->confirmed == 1)
+            <h5 class="card-header bg-warning text-white">ID reservation is {{$reservation->id}} on Pending</h5>
             @elseif($reservation->confirmed == 2)
-2
+            <h5 class="card-header bg-success text-white">ID reservation is {{$reservation->id}} Active</h5>
             @elseif($reservation->confirmed == 3)
-3 
-@endif
+            <h5 class="card-header bg-danger text-white">ID reservation is {{$reservation->id}} Dropped</h5>
+            @endif
 
             <div class="card-body">
                 <h2 class="card-title">{{$room->name}}</h2>

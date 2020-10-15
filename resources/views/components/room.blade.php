@@ -14,7 +14,7 @@
                                         <img src="img/svg_icon/location.svg" alt="">
                                         <h4 class="card-title">{{$room->name}}</h4>
                                     </div>
-                                    <span class="amount">From € {{$room->prize}}</span> per night
+                                    <span class="amount">From € {{$room->prize}}</span> per day
                                     <p class="card-text">Number of room in this suite:{{$room->number}}</p>
 
                             </div>

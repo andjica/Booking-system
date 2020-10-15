@@ -149,7 +149,7 @@ if(isset($arrayOfDisableDates))
                                                             <div id="last-name-error"></div>
                                                         </div>
                                                         <div class="col-lg-6">
-                                                        <p>number of people</p>
+                                                        <p>Number of people</p>
 
                                                         <input type="text" class="form-control" placeholder="" id="numberOfPeople">
                                                             <div id="number-error"></div>
@@ -209,22 +209,21 @@ if(isset($arrayOfDisableDates))
 		            				</div>
                                     <div class="bill-item people">
                                         <div class="bill-unit">
-                                            Number of nights : <span id="numberOfNights"></span>
+                                            Number of days : <span id="numberOfNights"></span>
                                         </div>
                                     </div>
 		            				<div class="bill-item service">
 		            					<div class="bill-unit">
-		            						Rooms &amp; Services :
 		            					</div>
-		            					<span class="price">$80</span>
+		            					<span class="price"></span>
 		            				</div>
 	                			</div>
 	                			<div class="bill-cell">
 	                				<div class="bill-item vat">
 		            					<div class="bill-unit">
-		            						Vat 8% :
+		            						Vat 21% 
 		            					</div>
-		            					<span class="price">$08</span>
+		            					<span class="price"></span>
 		            				</div>
 		            				<div class="bill-item total-price">
 		            					<div class="bill-unit">

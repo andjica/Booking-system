@@ -22,13 +22,13 @@
               </div>
               <button class="btn btn-sm btn-outline-secondary dropdown-toggle">
                 <span data-feather="calendar"></span>
-                This week
+            
               </button>
             </div>
           </div>
-        <div class="row justify-content-center mt-5">
+        <div class="row justify-content-center mt-5 pb-5 border-bottom">
                 <div class="col-md-4">
-                <div class="card text-left">
+                <div class="card text-center">
                     <div class="card-header ">
                     <i class="fa fa-home fa-3x text-danger"></i>
                     </div>
@@ -37,9 +37,7 @@
                         <p class="card-text">This is a dashboard for you, here you can insert your rooms.</p>
                         <a href="{{asset('/create-room')}}" class="btn btn-primary">Add new room <i class="fa fa-plus-square text-warning"></i></a>
                     </div>
-                    <div class="card-footer text-muted">
-                        2 days ago
-                    </div>
+                   
                     </div>
                 </div>
                 <div class="col-md-4">
@@ -55,9 +53,7 @@
                         <p class="card-text">Lets see your rooms, edit and delete it! Make a very unique description for room</p>
                         <a href="{{route('rooms')}}" class="btn btn-primary">See more</a>
                     </div>
-                    <div class="card-footer text-muted">
-                        2 days ago
-                    </div>
+                   
                     </div>
                 </div>
                 <div class="col-md-4">
@@ -71,15 +67,60 @@
                         <p class="card-text">Who make reservation? You can see reservation book for your rooms</p>
                         <a href="{{route('reservations')}}" class="btn btn-primary">Manage reservation</a>
                     </div>
-                    <div class="card-footer text-muted">
-                        2 days ago
-                    </div>
+                    
                     </div>
                 </div>
-                
+                </div>
+            
+            <div class="row justify-content-center mt-5 bg-light pb-5">
+
+                <div class="col-md-4 mt-3">
+                <div class="card text-center">
+                    <div class="card-header ">
+                    <i class="fas fa-question-circle fa-3x text-success"></i>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Contact Admin and Support Team <i class="fas fa-hammer"></i></h5>
+                        <p class="card-text">Do you have any problem with our website platform or you need any more information. Please, contact US!</p>
+                        <button class="btn btn-success" data-toggle="modal" data-target="#support">Contact here &nbsp;<i class="fa fa-plus-square text-white"></i></button>
+                    </div>
+                   
+                    </div>
+                </div>
+
+                <div class="col-md-4 mt-3">
+                <div class="card text-center">
+                    <div class="card-header ">
+                    <i class="fas fa-question-circle fa-3x text-success"></i>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Contact for help <i class="fas fa-medkit text-muted"></i></h5>
+                        <p class="card-text">Contact Admin for more help - especially if you have problems with your email, password or programmering bugs</p>
+                        <button class="btn btn-success" data-toggle="modal" data-target="#admin">Contact here &nbsp;<i class="fa fa-plus-square text-white"></i></button>
+                    </div>
+                   
+                    </div>
+                </div>
+
+                <div class="col-md-4 mt-3">
+                <div class="card text-center">
+                    <div class="card-header ">
+                    <i class="fas fa-money-check-alt fa-3x text-warning"></i> <i class="fas fa-question-circle fa-2x text-success"></i>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Contact Our Accounting management Team <i class="fa fa-heart text-danger"></i></h5>
+                        <p class="card-text">Contact for your accounting information - invoices..</p>
+                        <button class="btn btn-success" data-toggle="modal" data-target="#accounting">Contact here &nbsp;<i class="fa fa-plus-square text-white"></i></button>
+                    </div>
+                   
+                    </div>
+                </div>
+                </div>
             </div>
         </div>
 </div>
+
+@include('components.rentermodal')
 @endsection
 
 @section('css')
@@ -91,4 +132,5 @@
      }
     </style>
 @endsection
+
 

@@ -69,6 +69,7 @@ Route::group(['middleware' => ['checkrenter']], function ()
     Route::get('/drop-res/{id}', 'RenterController@drop')->name('drop-res/id');
     Route::get('/on-pending/{id}', 'RenterController@pending')->name('on-pending');
     Route::get('/reservations', 'RenterController@reservations')->name('reservations');
+    Route::get('/support-team' , 'RenterController@supportteam')->name('support-team');
 
     //images
     Route::get('/save-image', 'ImageController@index');

@@ -62,7 +62,7 @@
         <div class="row align-items-center">
         <div class="col-xl-12 lign-items-center">
         <div class="slider_text text-center justify-content-center">
-            <h3><i class="fa fa-map-marker-alt text-danger"></i>Find your best Property</h3>
+            <h3><i class="fa fa-map-marker-alt text-info"></i>Find your best Property</h3>
             <p>Find a place for a perfect photo <i class="fa fa-camera text-warning"></i></p>
         </div>
             <div class="property_form">
@@ -216,84 +216,14 @@
 </div>
 </div>
 </div>
-    <!-- /home_details  -->
-
-    <!-- accordion  -->
-    <div class="accordion_area">
-            <div class="container">
-                <div class="row align-items-center">
-                        <div class="col-xl-6 col-lg-6">
-                                <div class="faq_ask">
-                                    <h3><i class="fa fa-home fa-2x text-warning"></i>Frequently ask</h3>
-                                        <div id="accordion">
-                                                <div class="card">
-                                                    <div class="card-header" id="headingTwo">
-                                                        <h5 class="mb-0">
-                                                            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                                                    Adieus who direct esteem <span>It esteems luckily?</span>
-                                                            </button>
-                                                        </h5>
-                                                    </div>
-                                                    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion" style="">
-                                                        <div class="card-body">Esteem spirit temper too say adieus who direct esteem esteems luckily or picture placing drawing.
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="card">
-                                                    <div class="card-header" id="headingOne">
-                                                        <h5 class="mb-0">
-                                                            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                                                                    Who direct esteem It esteems?
-                                                            </button>
-                                                        </h5>
-                                                    </div>
-                                                    <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion" style="">
-                                                        <div class="card-body">Esteem spirit temper too say adieus who direct esteem esteems luckily or picture placing drawing.
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="card">
-                                                    <div class="card-header" id="headingThree">
-                                                        <h5 class="mb-0">
-                                                            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                                                    Duis consectetur feugiat auctor?
-                                                            </button>
-                                                        </h5>
-                                                    </div>
-                                                    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion" style="">
-                                                        <div class="card-body">Esteem spirit temper too say adieus who direct esteem esteems luckily or picture placing drawing.
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                </div>
-                            </div>
-                    <div class="col-xl-6 col-lg-6">
-                        <div class="accordion_thumb">
-                            <img src="img/banner/accordion.png" alt="">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    <!-- accordion  -->
-
-    <!-- counter_area  -->
-   
-    <!-- /counter_area  -->
-
-    <!-- testimonial_area  -->
-  
-    <!-- /testimonial_area  -->
-
-    <!-- team_area  -->
+ 
     <div class="team_area">
             <div class="container">
                     <div class="row">
                             <div class="col-xl-12">
                                 <div class="section_title mb-40 text-center">
                                     <h3>
-                                            Our Agents
+                                            Our Partners
                                     </h3>
                                 </div>
                             </div>

@@ -7,7 +7,7 @@
                         <div class="footer_widget">
                             <div class="footer_logo">
                                 <a href="#">
-                                    <img src="img/logo2.png" alt="wmc location" class="img-fluid">
+                                    <img src="{{asset('/')}}img/logo2.png" alt="wmc location" class="img-fluid">
                                 </a>
                             </div>
                             <p>
@@ -493,6 +493,13 @@ function goBack() {
     window.history.back();
   }
 </script>
+<script>
+        $(document).ready(function(){
+            $('#andjicas').click(function(){
+                alert(5);
+            });
+        });
+     </script>
 </body>
 
 </html>

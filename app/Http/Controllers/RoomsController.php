@@ -136,7 +136,8 @@ class RoomsController extends Controller
         $img = $room->image;
         //$room =Room::with('image')->where('id',$id)->first() ?? abort(404);
 
-        $rooms= Room::all();
+        $rooms= Room::inRandomOrder()->limit(3)->get();
+        
         $image = Image::first();
 
         $images = Image::where('room_id', $id)->skip(1)->limit(4)->get();
