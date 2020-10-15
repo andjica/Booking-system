@@ -221,8 +221,8 @@ class RenterController extends Controller
         return view('renter.supportadmin');
     }
 
-    public function supportaccount()
+    public function supportaccoounting()
     {
-        return view('renter.supporaccount');
+        return view('renter.supportaccoounting');
     }
 }

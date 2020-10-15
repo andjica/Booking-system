@@ -71,7 +71,7 @@ Route::group(['middleware' => ['checkrenter']], function ()
     Route::get('/reservations', 'RenterController@reservations')->name('reservations');
     Route::get('/support-team' , 'RenterController@supportteam')->name('support-team');
     Route::get('/support-admin', 'RenterController@supportadmin')->name('support-admin');
-    Route::get('/support-account', 'RenterController@supportaccoount')->name('support-account');
+    Route::get('/support-accounting', 'RenterController@supportaccoounting')->name('support-accounting');
 
     //images
     Route::get('/save-image', 'ImageController@index');
