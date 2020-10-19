@@ -96,7 +96,7 @@
                     <div class="card-body">
                         <h5 class="card-title">Contact for help <i class="fas fa-medkit text-muted"></i></h5>
                         <p class="card-text">Contact Admin for more help - especially if you have problems with your email, password or programmering bugs</p>
-                        <button class="btn btn-success" data-toggle="modal" data-target="#admin">Contact here &nbsp;<i class="fa fa-plus-square text-white"></i></button>
+                        <a href="{{route('support-admin')}}" class="btn btn-success">Contact here &nbsp;<i class="fa fa-plus-square text-white"></i></a>
                     </div>
                    
                     </div>
@@ -110,7 +110,8 @@
                     <div class="card-body">
                         <h5 class="card-title">Contact Our Accounting management Team <i class="fa fa-heart text-danger"></i></h5>
                         <p class="card-text">Contact for your accounting information - invoices..</p>
-                        <button class="btn btn-success" data-toggle="modal" data-target="#accounting">Contact here &nbsp;<i class="fa fa-plus-square text-white"></i></button>
+                        <a href="{{route('support-accounting')}}" class="btn btn-success">Contact here &nbsp;<i class="fa fa-plus-square text-white"></i></a>
+
                     </div>
                    
                     </div>

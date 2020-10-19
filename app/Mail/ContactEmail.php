@@ -32,6 +32,6 @@ class ContactEmail extends Mailable
         return $this->from('info@worldmediacrew.com')
         ->subject(request()->name.' with subject  '.request()->subject)
         ->to('info@worldmediacrew.com')
-        ->view('emails.apply-contact')->with('data', $this->data);
+        ->view('emails.support.apply-contact')->with('data', $this->data);
     }
 }

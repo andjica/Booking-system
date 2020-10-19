@@ -3,19 +3,22 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Session;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\ContactEmail;
 
 class EmailController extends Controller
 {
     public function send()
     {
         $data = ([
-            'name' => request()->name,
-            'email' => request()->email,
+            'name' => auth()->user()->name,
+            'email' => auth()->user()->email,
             'subject' => request()->subject,
             'message' => request()->message
         ]);
 
-        $emailto = request()->email;
+        $emailto = auth()->user()->email;
     
        
             Mail::cc($emailto, 'developersforanymarket@gmail.com')->send(new ContactEmail($data));
