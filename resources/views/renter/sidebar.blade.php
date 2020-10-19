@@ -22,19 +22,25 @@
               <li class="nav-item">
                 <a class="nav-link" href="#">
                   <span data-feather="users"></span>
-                  Customers
+                  Information settings
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">
+                <a class="nav-link" href="{{route('support-team')}}">
+                  <span data-feather="users"></span>
+                  Support Team and Admin
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{{route('support-admin')}}">
                   <span data-feather="bar-chart-2"></span>
-                  Reports
+                  Support Admin
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">
+                <a class="nav-link" href="{{route('support-accounting')}}">
                   <span data-feather="layers"></span>
-                  Integrations
+                  Support Accounting Management
                 </a>
               </li>
             </ul>
