@@ -73,6 +73,7 @@ Route::group(['middleware' => ['checkrenter']], function ()
     Route::get('/support-admin', 'RenterController@supportadmin')->name('support-admin');
     Route::get('/support-accounting', 'RenterController@supportaccoounting')->name('support-accounting');
     Route::post('/contact-support', 'EmailController@send')->name('contact-support');
+    Route::get('/settings', 'RenterController@settings')->name('settings');
 
 
     //images
