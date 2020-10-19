@@ -87,9 +87,9 @@
             <p class="text-warning" id="er-bath"></p>
         </div> -->
         <div class="serach_icon">
-                <input type="submit" class="btn btn-warning mt-5" value="Search" id="andjica">
+                <input type="submit" class="btn btn-warning mt-5" value="Search" id="andjica" style="width:100%;">
                        
-                <i class="ti-search text-warning fa-2x"></i>
+                
         </div>
     </div>
     </form>

@@ -4,7 +4,10 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Room;
+use App\Country;
+use App\City;
 use App\Reservation;
+use App\Renter;
 use Illuminate\Support\Carbon;
 use Calendar;
 use DateTime;
@@ -230,6 +233,82 @@ class RenterController extends Controller
 
     public function settings()
     {
-        return view('renter.settings');
+        $countries = Country::all();
+        $cities = City::all();
+
+        if(request()->value)
+        {
+        $val = request()->value;
+        $subcities = City::where('country_id', $val)->get();
+        return response()->json(['val' => $val, 'subcities' => $subcities])->header("Access-Control-Allow-Origin",  "*");
+        }
+
+        $usercount = Renter::where('user_id', auth()->user()->id)->count();
+
+        $user = Renter::where('user_id', auth()->user()->id)->first();
+        
+        return view('renter.settings', compact('countries', 'cities', 'user', 'usercount'));
+    }
+
+    public function setrenter()
+    {
+
+        $usercount = Renter::where('user_id', auth()->user()->id)->count();
+
+        if($usercount > 0)
+        {
+            
+            $renter = Renter::where('user_id', auth()->user()->id)->first();
+            $renter->user_id = auth()->user()->id;
+            $renter->company_name = request()->company;
+            $renter->telephone_num = request()->tel;
+            
+            $renter->address = request()->add;
+            $renter->post_num = request()->zip;
+
+            if(request()->city)
+            {
+                $renter->city_id = request()->city;
+            }
+            
+            
+            $renter->save();
+            return redirect()->back();
+        }
+        else
+        {
+            $renter = new Renter();
+            $renter->user_id = auth()->user()->id;
+            $renter->company_name = request()->company;
+            $renter->telephone_num = request()->tel;
+            
+            $renter->address = request()->add;
+            $renter->post_num = request()->zip;
+            $renter->city_id = request()->city;
+            
+            $renter->save();
+            return redirect()->back();
+        }
+        
+
+    }
+
+    public function setcard()
+    {
+        $usercount = Renter::where('user_id', auth()->user()->id)->count();
+
+        if($usercount > 0)
+        {
+            $renter = Renter::where('user_id', auth()->user()->id)->first();
+            
+            $renter->iban = request()->iban;
+            $renter->save();
+            return redirect()->back()->with('status', 'You update your information successfully');
+        }
+        else
+        {
+            return redirect()->back()->with('status', 'Please write your information first then eneter iban');
+        }
+        
     }
 }

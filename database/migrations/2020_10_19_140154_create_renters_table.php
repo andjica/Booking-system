@@ -21,12 +21,18 @@ class CreateRentersTable extends Migration
             $table->string('address');
             $table->integer('post_num');
             $table->integer('user_id')->unsigned()->index();
+            $table->integer('city_id')->unsigned()->index();
             $table->timestamps();
 
             $table->foreign('user_id')
                 ->references('id')
                 ->on('users')
                 ->onDelete('cascade');
+
+            $table->foreign('city_id')
+            ->references('id')
+            ->on('cities')
+            ->onDelete('cascade');
         });
     }
 

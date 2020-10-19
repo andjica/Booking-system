@@ -11,9 +11,9 @@
                                 </a>
                             </div>
                             <p>
-                                    <a href="#">conbusi@support.com</a> <br>
-                                    +10 873 672 6782 <br>
-                                    600/D, Green road, NewYork
+                                    <a href="#">info@wmclocations.com</a> <br>
+                                    +316 57880170<br>
+                                    Netherlands, Amsterdam
 
                             </p>
                             <div class="socail_links">
@@ -38,7 +38,7 @@
 
                         </div>
                     </div>
-                    <div class="col-xl-2 col-md-6 col-lg-3">
+                    <div class="col-xl-3 col-md-6 col-lg-3">
                         <div class="footer_widget">
                             <h3 class="footer_title">
                                     Services
@@ -53,10 +53,10 @@
 
                         </div>
                     </div>
-                    <div class="col-xl-2 col-md-6 col-lg-2">
+                    <div class="col-xl-3 col-md-6 col-lg-2">
                         <div class="footer_widget">
                             <h3 class="footer_title">
-                                    Useful Links
+                                    Partner program
                             </h3>
                             <ul>
                                 <li><a href="#">About</a></li>
@@ -66,17 +66,18 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="col-xl-4 col-md-6 col-lg-4">
-                            <div class="footer_widget">
-                                    <h3 class="footer_title">
-                                            Subscribe
-                                    </h3>
-                                    <form action="#" class="newsletter_form">
-                                        <input type="text" placeholder="Enter your mail">
-                                        <button type="submit">Subscribe</button>
-                                    </form>
-                                    <p class="newsletter_text">Esteem spirit temper too say adieus who direct esteem esteems luckily.</p>
-                                </div>
+                    <div class="col-xl-3 col-md-6 col-lg-2">
+                        <div class="footer_widget">
+                            <h3 class="footer_title">
+                                    Partner program
+                            </h3>
+                            <ul>
+                                <li><a href="#">About</a></li>
+                                <li><a href="#">Blog</a></li>
+                                <li><a href="#"> Contact</a></li>
+                                <li><a href="#">Appointment</a></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -87,9 +88,7 @@
                 <div class="row">
                     <div class="col-xl-12">
                         <p class="copy_right text-center">
-                            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright WMC Locations&copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="dfambusiness.com" target="_blank">Dfam Digital Agency</a>
-<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+Copyright WMC Locations All rights reserved | developed by DFAM Digital Agency
                         </p>
                     </div>
                 </div>
@@ -147,13 +146,90 @@ Copyright WMC Locations&copy;<script>document.write(new Date().getFullYear());</
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"
     integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30="
     crossorigin="anonymous"></script>
+    
+    <script>
+            $(document).ready(function(){
+                $('#formica').submit(function(e){
+
+                    let company = $('#company').val();
+                    let tel = $('#tel').val();
+                    let add = $('#add').val();
+                    let country = $('#sel_depart').val();
+                    let zip = $('#zip').val();
+
+                    let companym = document.getElementById('comp-mistake');
+                    let telm = document.getElementById('tel-mistake');
+                    let addm = document.getElementById('add-mistake');
+                    let citym = document.getElementById('city-mistake');
+                    
+                    let errors = [];
+
+                    let phone =/^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/;
+                    
+
+                    if(company == "")
+                    {
+                        errors.push = "Mistake";
+                        $('#company').css('border-color','red');
+                        e.preventDefault();
+                    }
+                    
+                        
+                    if(tel == "")
+                    {
+                        errors.push = "Mistake";
+                        $('#tel').css('border-color','red');
+                        e.preventDefault();
+                    }
+                    else if(!tel.match(phone))
+                    {
+                        telm.innerHTML = "Phone nummber is invalid";
+                        errors.push = "Mistake phone";
+                    }
+                       
+                    if(add == "")
+                    {
+                        errors.push = "Mistake";
+                        $('#add').css('border-color','red');
+                        e.preventDefault();
+                    }
+
+                    if(country == "")
+                    {
+                        errors.push = "Mistake";
+                        $('#sel_depart').css('border-color','red');
+                        e.preventDefault();
+                    }
+
+                    if(zip == "")
+                    {
+                        errors.push = "Mistake";
+                        $('#zip').css('border-color','red');
+                        e.preventDefault();
+                    }
+
+                    if(errors.length==0)
+                    {
+                            
+                        return true;
+                        
+                            
+                    }
+
+
+                    
+                });
+            });
+        </script>
     <script src="https://cdn.jsdelivr.net/npm/select2@4.0.12/dist/js/select2.min.js"></script>
     <script src="{{asset('/')}}js/select2.js"></script>
     <script src="{{asset('/')}}js/roomscripts.js"></script>
   
        
-    </script>
+  
+        
 	<script src="{{asset('/')}}js/main.js"></script>
+    
     <script>
         function collision($div1, $div2) {
             var x1 = $div1.offset().left;
@@ -493,6 +569,8 @@ function goBack() {
     window.history.back();
   }
 </script>
+
+
 
 </body>
 

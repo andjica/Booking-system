@@ -13,17 +13,17 @@
                                     <div class="short_contact_list">
                                             <ul>
                                                 <li><a href="#"> <i class="fa fa-envelope"></i> info@worldmediacrew.com</a></li>
-                                                <li><a href="#"> <i class="fa fa-phone"></i> 1601-609 6780</a></li>
+                                                <li><a href="#"> <i class="fa fa-phone"></i> +316 57880170</a></li>
                                             </ul>
                                         </div>
                                         <div class="social_media_links">
-                                            <a href="#">
+                                            <a href="https://instagram.com/wmclocations?igshid=qwf9iqneehms">
                                                 <i class="fa fa-instagram"></i>
                                             </a>
-                                            <a href="#">
+                                            <a href="https://instagram.com/wmclocations?igshid=qwf9iqneehms">
                                                 <i class="fa fa-facebook"></i>
                                             </a>
-                                            <a href="#">
+                                            <a href="https://instagram.com/wmclocations?igshid=qwf9iqneehms">
                                                 <i class="fa fa-youtube"></i>
                                             </a>
                                         </div>
@@ -37,8 +37,9 @@
                 <div class="container">
                     <div class="header_bottom_border">
                         <div class="row align-items-center">
+                        
                             <div class="col-xl-3 col-lg-2">
-                                <div class="logo">
+                                <div class="logo  vb">
                                     <a href="{{asset('/')}}">
                                         <img src="{{asset('/')}}img/logic.png" alt="" style="    width: 140px;   position: relative;   top: -9px;">
                                     </a>
@@ -47,7 +48,7 @@
                             <div class="col-xl-9 col-lg-9">
                                 <div class="main-menu  d-none d-lg-block">
                                     <nav>
-                                        <ul id="navigation" style="text-align:right;">
+                                        <ul id="navigation" >
                                             <li><a class="active" href="{{asset('/')}}">home</a></li>
                                             <li><a  href="{{asset('/all')}}">All Locations</a></li>
                                             <li><a href="">Find Locations <i class="ti-angle-down"></i></a>
@@ -103,27 +104,27 @@
 				<ul class="xd">
 					<li class="item-menu-mobile bb">
 					<i class="fa fa-home faks"></i>
-						<a class="lilf" href="{{asset('/products')}}">Home</a>
+						<a class="lilf" href="{{asset('/')}}">Home</a>
 					</li>
 
 					<li class="item-menu-mobile bb">
-					<i class="fa fa-shopping-bag faks"></i>
-						<a class="lilf" href="{{asset('/product-detail')}}">Shop</a>
+					<i class="fa fa-search faks"></i>
+						<a class="lilf" href="{{asset('/')}}">Search</a>
 					</li>
 
 					<li class="item-menu-mobile bb">
-					<i class="fa fa-percent faks"></i>
-						<a class="lilf" href="{{asset('/cart')}}">Sale</a>
+					<i class="fa fa-map-marker faks"></i>
+						<a class="lilf" href="{{asset('/all')}}">Locations</a>
 					</li>
 
 					<li class="item-menu-mobile bb">
 					<i class="fa fa-tags faks"></i>
-						<a class="lilf" href="blog.html">Brands</a>
+						<a class="lilf" href="{{asset('/all')}}">Hotspots</a>
 					</li>
 
 					<li class="item-menu-mobile bb">
 					<i class="fa fa-address-card faks"></i>
-						<a class="lilf" href="{{asset('/about')}}">login</a>
+						<a class="lilf" href="{{asset('/home')}}">Account</a>
 					</li>
 				</ul>
 			</div>
@@ -135,6 +136,9 @@
     .mobile{
         display:none !important;
     }
+    #navigation{
+        text-align:right;
+    }
 }
 
 @media screen and (max-width:768px){
@@ -144,6 +148,39 @@
         width:100%;
         z-index:1000000;
     }
+    .vb{
+        text-align:center;
+    }
+
+    #navigation{
+    text-align: left !important;
+    display: block;
+    }
+    .header-area .main-header-area.sticky .header_bottom_border {
+    border-bottom: none;
+    padding-top: 8px;
+}
+.slicknav_menu .slicknav_nav {
+    background: #fff;
+    float: right;
+    margin-top: 0;
+    padding: 0;
+    width: 100%;
+    padding: 0;
+    border-radius: 0px;
+    margin-top: 5px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    top: 12px;
+}
+
+    .header-area .main-header-area {
+    padding: 20px 10px;
+    background: #fff;
+    background: transparent;
+}
     .xd{
 		display: flex;
         width: 100%;
@@ -155,13 +192,14 @@
 			text-align: center;
 		display: grid;
 		
-		background-color: grey;
+        background-color: white;
 	}
 	.faks{
 		font-size: 28px;
 		padding-top: 7px;
 		height: 100%;
-		width: 100%;
+        width: 100%;
+        color: #337ab7;
 	}
 	.lilf{
 		font-weight: 700;

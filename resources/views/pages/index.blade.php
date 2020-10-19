@@ -2,7 +2,7 @@
 @section('css')
 <style>
 .warper{
-    width: 166px !important;
+    width: 100% !important;
     background: transparent !important;
     color: #C7C7C7 !important;
     font-size: 15px !important;

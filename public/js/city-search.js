@@ -18,7 +18,7 @@
               success:function(response){
              
                
-                text= "<select name='city' class='form-control andjica-select'>";
+                text= "<select name='city' class='form-control andjica-select' id='andjicacity'>";
                
               
               $.each(response.subcities, function(index, subcities){

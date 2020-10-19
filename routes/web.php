@@ -52,13 +52,13 @@ Route::post('/stpaypro', 'StripeController@paypro')->name('stpaypro');
 Route::post('/stpayex', 'StripeController@payex')->name('stpayex');
 Route::post('/stpayroom', 'StripeController@payroom')->name('stpayroom');
 
-
+Route::get('/room/{id}', 'RoomsController@show');
 
 
 //rooms - renteri
 Route::group(['middleware' => ['checkrenter']], function () 
 {
-    Route::get('/room/{id}', 'RoomsController@show');
+    
     Route::get('/create-room', 'RoomsController@create')->name('create-room');
     Route::post('/insert-room', 'RoomsController@store')->name('insert-room');
     Route::get('/rooms', 'RoomsController@index')->name('rooms');
@@ -74,6 +74,8 @@ Route::group(['middleware' => ['checkrenter']], function ()
     Route::get('/support-accounting', 'RenterController@supportaccoounting')->name('support-accounting');
     Route::post('/contact-support', 'EmailController@send')->name('contact-support');
     Route::get('/settings', 'RenterController@settings')->name('settings');
+    Route::post('/set-renter', 'RenterController@setrenter')->name('set-renter');
+    Route::post('/set-card', 'RenterController@setcard')->name('set-card');
 
 
     //images

@@ -46,3 +46,10 @@
 .carousel-inner .carousel-item-left{ 
   transform: translateX(0);
 }
+
+
+@media screen and (max-width:768px){
+.select2 .select2-container .select2-container--default{
+  width:100% !important;
+}
+}
