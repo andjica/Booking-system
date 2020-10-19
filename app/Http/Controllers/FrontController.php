@@ -128,11 +128,13 @@ class FrontController extends Controller
                 $countrooms = $rooms->count();
                 return view('pages.filter-rooms', compact('rooms','categories', 'cities', 'countrooms', 'categoryname', 'cityname'));
             }
-        }
-
-       
-            
-        
-        
+        }    
+ 
     }
+    
+    public function contact()
+    {
+            return view('pages.contact');
+    }
+       
 }
