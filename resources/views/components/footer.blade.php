@@ -45,7 +45,7 @@
                             </h3>
                             <ul>
                                 <li><a href="#">Marketing & SEO</a></li>
-                                <li><a href="#"> Startup</a></li>
+                                <li><a href="#">Startup</a></li>
                                 <li><a href="#">Finance solution</a></li>
                                 <li><a href="#">Food</a></li>
                                 <li><a href="#">Travel</a></li>
