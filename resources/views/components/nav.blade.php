@@ -50,10 +50,9 @@
                                     <nav>
                                         <ul id="navigation" >
                                             <li><a class="active" href="{{asset('/')}}">home</a></li>
-                                            <li><a  href="{{asset('/all')}}">All Locations</a></li>
                                             <li><a href="">Find Locations <i class="ti-angle-down"></i></a>
                                                 <ul class="submenu">
-                                                        <li><a href="{{asset('/')}}">Find Locations</a></li>
+                                                    <li><a  href="{{asset('/all')}}">All Locations</a></li>
                                                         <li><a href="{{asset('/supporting')}}">Locations Support</a></li>
                                                 </ul>
                                             </li>
@@ -80,8 +79,9 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
                             </li>
-                            <li><a href="{{asset('./home')}}">Account</a></li>
+                            
                             @endif
+                            <li><a href="{{route('contact')}}">Contact</a></li>
                                         </ul>
                                     </nav>
                                 </div>

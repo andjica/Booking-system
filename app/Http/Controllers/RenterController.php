@@ -150,15 +150,15 @@ class RenterController extends Controller
 
         //payed and confired by renter
         $res2 = Reservation::where('confirmed', 2)
-        ->where('renter_id', $renter)->get();
+        ->where('renter_id', $renter)->limit(4)->get();
 
         //payed but dropped
         $res3 = Reservation::where('confirmed', 3)
-        ->where('renter_id', $renter)->get();
+        ->where('renter_id', $renter)->limit(4)->get();
 
         //payed but on waiting
         $res1 = Reservation::where('confirmed', 1)
-        ->where('renter_id', $renter)->get();
+        ->where('renter_id', $renter)->limit(4)->get();
         
         
         
@@ -310,5 +310,27 @@ class RenterController extends Controller
             return redirect()->back()->with('status', 'Please write your information first then eneter iban');
         }
         
+
+       
+    }
+    public function activeres()
+    {
+        $renter = auth()->user()->id;
+        $res2 = Reservation::where('confirmed', 2)
+        ->where('renter_id', $renter)
+        ->orderBy('created_at', 'desc')
+        ->paginate(8);
+
+        return view('renter.active-res', compact('res2'));
+    }
+
+    public function droppedres()
+    {
+        $renter = auth()->user()->id;
+        $res3 = Reservation::where('confirmed', 3)
+        ->where('renter_id', $renter)->orderBy('created_at', 'desc')
+        ->paginate(8);
+
+        return view('renter.dropped-res', compact('res3'));
     }
 }

@@ -69,6 +69,8 @@ Route::group(['middleware' => ['checkrenter']], function ()
     Route::get('/drop-res/{id}', 'RenterController@drop')->name('drop-res/id');
     Route::get('/on-pending/{id}', 'RenterController@pending')->name('on-pending');
     Route::get('/reservations', 'RenterController@reservations')->name('reservations');
+    Route::get('/active-reservations', 'RenterController@activeres')->name('active-reservations');
+    Route::get('/dropped-reservations', 'RenterController@droppedres')->name('dropped-reservations');
     Route::get('/support-team' , 'RenterController@supportteam')->name('support-team');
     Route::get('/support-admin', 'RenterController@supportadmin')->name('support-admin');
     Route::get('/support-accounting', 'RenterController@supportaccoounting')->name('support-accounting');
@@ -96,5 +98,6 @@ Route::get('/logout', 'Auth\LoginController@logout');
 //useri
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/user-reservations', 'HomeController@reservations')->name('user-reservations');
+Route::post('/contact-email', 'EmailController@contact')->name('contact-email');
 
 

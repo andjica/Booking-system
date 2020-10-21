@@ -103,7 +103,12 @@
                         </div>
                     </div>                    
                 </div>
-                <form id="contact-form-an" name="contact-form" action="{{route('contact-support')}}" method="POST" class="p-3 shadow-lg"> 
+                @if(session('success'))
+                <div class="alert alert-success">
+                    {{session('success')}}
+                </div>
+                @endif
+                <form id="contact-form-an" name="contact-form" action="{{route('contact-email')}}" method="POST" class="p-3 shadow-lg"> 
                 @csrf
                 <!--Grid row-->
                 <div class="row">

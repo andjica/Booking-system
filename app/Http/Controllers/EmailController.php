@@ -25,4 +25,21 @@ class EmailController extends Controller
                 
             return back()->with('success', 'Thank you for sending email to Us');
     }
+    public function contact()
+    {
+        $data = ([
+            'name' => request()->name,
+            'email' => request()->email,
+            'subject' => request()->subject,
+            'message' => request()->message
+        ]);
+            
+        $emailto = request()->email;
+    
+    
+            Mail::cc($emailto, 'developersforanymarket@gmail.com')->send(new ContactEmail($data));
+                
+            return back()->with('success', 'Thank you for sending email to Us');
+    }
+    
 }
