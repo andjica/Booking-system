@@ -106,3 +106,8 @@ Route::get('/user-reservations', 'HomeController@reservations')->name('user-rese
 Route::post('/contact-email', 'EmailController@contact')->name('contact-email');
 
 
+//admin
+Route::get('/admin', 'AdminController@index')->name('admin');
+Route::get('/admin-renters', 'AdminController@renters')->name('admin-renters');
+
+

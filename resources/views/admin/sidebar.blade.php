@@ -8,15 +8,15 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">
+                <a class="nav-link" href="{{route('admin-renters')}}">
                   <span data-feather="file"></span>
-                  Orders
+                  Renters
                 </a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">
                   <span data-feather="shopping-cart"></span>
-                  Products
+                  Users
                 </a>
               </li>
               <li class="nav-item">

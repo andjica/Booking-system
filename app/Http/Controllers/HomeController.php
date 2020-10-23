@@ -31,7 +31,7 @@ class HomeController extends Controller
 
         if($user->role_id == 1)
         {
-            return view('admin.index');
+            return redirect('/admin');
         }
         elseif($user->role_id == 3)
         {
