@@ -56,4 +56,9 @@ class HomeController extends Controller
 
         return view('user.res', compact('reservations', 'rescount'));
     }
+
+    public function usercontact()
+    {
+        return view('user.contact');
+    }
 }

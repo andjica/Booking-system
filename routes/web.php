@@ -100,6 +100,8 @@ Route::get('/logout', 'Auth\LoginController@logout');
 
 //useri
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/user-contact', 'HomeController@usercontact')->name('user-contact');
+Route::post('/user-email', 'EmailController@usercontact')->name('user-email');
 Route::get('/user-reservations', 'HomeController@reservations')->name('user-reservations');
 Route::post('/contact-email', 'EmailController@contact')->name('contact-email');
 
