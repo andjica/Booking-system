@@ -306,7 +306,16 @@ class RoomsController extends Controller
     }
     public function edit($id)
     {
-        //
+        $categories = Category::all();
+        $countries = Country::all();
+        $room = Room::find($id);
+        if(request()->value)
+        {
+        $val = request()->value;
+        $subcities = City::where('country_id', $val)->get();
+        return response()->json(['val' => $val, 'subcities' => $subcities])->header("Access-Control-Allow-Origin",  "*");
+        }
+        return view('renter.edit-room', compact('room','categories', 'countries'));
     }
 
     /**
@@ -316,9 +325,56 @@ class RoomsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update($id)
     {
-        //
+        request()->validate([
+            'title'=>'required|min:3|max:75',
+            'desc1'=>'required|min:10|max:200',
+            'desc2'=>'required|min:10',
+            'desc3'=>'required|min:10',
+            'price'=>'required|numeric',
+            'number'=>'required|numeric',
+            'square' => 'required|numeric',
+            'add' => 'required|min:7|max:55',
+            'numberbath' => 'required',
+            'pets' => 'required|not_in:0',
+            'beds' => 'required|not_in:0',
+            'category' => 'required|not_in:0'
+        ],
+        [
+            'title.required' => 'You must give a name of your room'
+        ]);
+            $room = Room::where('id', $id)->first();
+        
+            $room->name = request()->title;
+            $room->description_one = request()->desc1;
+            $room->description_two = request()->desc2;
+            $room->description_tree = request()->desc3;
+            $room->prize = request()->price;
+            $room->number_of_rooms =request()->number;
+            $room->square = request()->square;
+            $room->address = request()->add;
+            $room->number_of_bath = request()->numberbath;
+            $room->pets = request()->pets;
+            $room->user_id = auth()->user()->id;
+            $room->beds = request()->beds;
+            $room->category_id = request()->category;
+    
+            if(request()->city)
+            {
+                $room->city_id = request()->city;
+            }
+            else
+            {
+                $room->city_id = request()->country;
+            }
+     
+               
+                $room->save();
+    
+                return redirect()->back()->with('success', 'You update a room successfully');
+            
+       
     }
 
     /**

@@ -12,7 +12,6 @@
                             </div>
                             <p>
                                     <a href="#">info@wmclocations.com</a> <br>
-                                    +316 57880170<br>
                                     Netherlands, Amsterdam
 
                             </p>
@@ -44,11 +43,11 @@
                                     Services
                             </h3>
                             <ul>
-                                <li><a href="#">Marketing & SEO</a></li>
-                                <li><a href="#">Startup</a></li>
-                                <li><a href="#">Finance solution</a></li>
-                                <li><a href="#">Food</a></li>
-                                <li><a href="#">Travel</a></li>
+                                <li><a href="{{asset('/all')}}">All locations</a></li>
+                                <li><a href="{{asset('/')}}">Search Locations</a></li>
+                                <li><a href="{{asset('/home')}}">Finance Locations</a></li>
+                                <li><a href="{{asset('/home')}}">My Account</a></li>
+                                <li><a href="{{asset('/login')}}">Login & Register</a></li>
                             </ul>
 
                         </div>
@@ -59,10 +58,10 @@
                                     Partner program
                             </h3>
                             <ul>
-                                <li><a href="#">About</a></li>
-                                <li><a href="#">Blog</a></li>
-                                <li><a href="#"> Contact</a></li>
-                                <li><a href="#">Appointment</a></li>
+                                <li><a href="{{asset('/')}}">About</a></li>
+                                <li><a href="{{asset('/')}}">Blog</a></li>
+                                <li><a href="{{asset('/contact')}}"> Contact</a></li>
+                                <li><a href="{{asset('/contact')}}">Appointment</a></li>
                             </ul>
                         </div>
                     </div>
@@ -72,10 +71,10 @@
                                     Partner program
                             </h3>
                             <ul>
-                                <li><a href="#">About</a></li>
-                                <li><a href="#">Blog</a></li>
-                                <li><a href="#"> Contact</a></li>
-                                <li><a href="#">Appointment</a></li>
+                                <li><a href="{{asset('/')}}">About</a></li>
+                                <li><a href="{{asset('/register')}}">Become a renter</a></li>
+                                <li><a href="{{asset('/contact')}}"> Contact</a></li>
+                                <li><a href="{{asset('/contact')}}">Appointment</a></li>
                             </ul>
                         </div>
                     </div>

@@ -1,38 +1,6 @@
 <header>
         <div class="header-area bg-dark">
-            <div class="header-top_area d-none d-lg-block">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-xl-5 col-md-5 ">
-                            <div class="header_left">
-                                <p>Welcome World Media Crew Locations</p>
-                            </div>
-                        </div>
-                        <div class="col-xl-7 col-md-7">
-                            <div class="header_right d-flex">
-                                    <div class="short_contact_list">
-                                            <ul>
-                                                <li><a href="#"> <i class="fa fa-envelope"></i> info@worldmediacrew.com</a></li>
-                                                <li><a href="#"> <i class="fa fa-phone"></i> +316 57880170</a></li>
-                                            </ul>
-                                        </div>
-                                        <div class="social_media_links">
-                                            <a href="https://instagram.com/wmclocations?igshid=qwf9iqneehms">
-                                                <i class="fa fa-instagram"></i>
-                                            </a>
-                                            <a href="https://instagram.com/wmclocations?igshid=qwf9iqneehms">
-                                                <i class="fa fa-facebook"></i>
-                                            </a>
-                                            <a href="https://instagram.com/wmclocations?igshid=qwf9iqneehms">
-                                                <i class="fa fa-youtube"></i>
-                                            </a>
-                                        </div>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
+     
             <div id="sticky-header" class="main-header-area">
                 <div class="container">
                     <div class="header_bottom_border">

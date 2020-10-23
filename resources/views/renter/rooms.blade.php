@@ -14,26 +14,21 @@
                         </div>
                     @endif
 
-                    You are logged in!</h1>
-            <div class="btn-toolbar mb-2 mb-md-0">
-              <div class="btn-group mr-2">
-                <button class="btn btn-sm btn-outline-secondary">Share</button>
-                <button class="btn btn-sm btn-outline-secondary">Export</button>
-              </div>
-              <button class="btn btn-sm btn-outline-secondary dropdown-toggle">
-                <span data-feather="calendar"></span>
-                This week
-              </button>
-            </div>
+                    <button type="button" class="btn btn-info text-white" onclick="goBack()">
+                <i class="fa fa-arrow-left"></i> Back
+         </button> &nbsp; You are logged in!</h1>
           </div>
-        <div class="row justify-content-center mt-5">
+        <div class="row mt-5">
+       
         @if (session('success'))
                         <div class="alert alert-success" role="alert">
                             {{ session('success') }}
                         </div>
                     @endif
         @if($roomscount > 0)
+        
         <table class="table">
+      
             <thead>
                 <tr>
                 <th scope="col">#</th>
@@ -61,7 +56,7 @@
                     <path fill-rule="evenodd" d="M4 2h10a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1v1a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2h1a1 1 0 0 1 1-1z"/>
                     </svg>&nbsp;Manage Images</a></td>
                 <td><a href="{{asset('/delete-room/'.$r->id)}}" class="btn btn-danger"><i class="fa fa-trash"></i>&nbsp;Yes</a></td>
-
+                <td><a href="{{asset('/edit-room/'.$r->id)}}" class="btn btn-success"><i class="fas fa-edit"></i></a></td>
                 </tr>
                 
               @endforeach

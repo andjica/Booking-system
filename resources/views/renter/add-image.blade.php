@@ -13,18 +13,9 @@
                             {{ session('status') }}
                         </div>
                     @endif
-
-                    You are logged in!</h1>
-            <div class="btn-toolbar mb-2 mb-md-0">
-              <div class="btn-group mr-2">
-                <button class="btn btn-sm btn-outline-secondary">Share</button>
-                <button class="btn btn-sm btn-outline-secondary">Export</button>
-              </div>
-              <button class="btn btn-sm btn-outline-secondary dropdown-toggle">
-                <span data-feather="calendar"></span>
-                This week
-              </button>
-            </div>
+                    <button type="button" class="btn btn-info text-white" onclick="goBack()">
+                <i class="fa fa-arrow-left"></i> Back
+         </button> &nbsp; You are logged in!</h1>
           </div>
         <div class="row justify-content-center mt-5">
                 <div class="col-md-7">

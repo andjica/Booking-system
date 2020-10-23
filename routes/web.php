@@ -62,6 +62,9 @@ Route::group(['middleware' => ['checkrenter']], function ()
     Route::get('/create-room', 'RoomsController@create')->name('create-room');
     Route::post('/insert-room', 'RoomsController@store')->name('insert-room');
     Route::get('/rooms', 'RoomsController@index')->name('rooms');
+    Route::get('/edit-room/{id}', 'RoomsController@edit')->name('edit-room');
+    Route::post('/update-room/{id}', 'RoomsController@update')->name('update-room/{id}');
+
     Route::get('/delete-room/{id}', 'RoomsController@destroy')->name('delete-room/{id}');
     Route::get('/confirmed-reservation/{id}', 'RenterController@confirmed')->name('confirmed-reservation/id');
     Route::get('/view-res/{id}', 'RenterController@viewres')->name('view-res/id');

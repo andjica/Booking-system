@@ -101,8 +101,10 @@
                             </div>
                             @foreach($room->image as $img)
                                 @if ($loop->first)
+                                   <a href="{{asset('/room/'.$room->id)}}">
                                     <img src="{{asset('/image/'.$img->url)}}" alt="{{$room->name}}" height="234px">
-                                @endif
+                                        </a>
+                                 @endif
                             @endforeach
                         </div>
                         <div class="property_content">
