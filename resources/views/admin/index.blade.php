@@ -29,13 +29,13 @@
           <div class="row justify-content-center p-5 bg-light">
            <form class="form-inline" method="GET" action="{{route('search-by-name')}}">
                @csrf
-                <input class="form-control m-2" id="myInput" type="text" placeholder="Search.." style="width:500px;">
+                <input class="form-control m-2" id="myInput" type="text" name="text" placeholder="Search.." style="width:500px;">
                 <button type="submit" class="btn btn-info">Search </button>
                 
             </form>    
         </div>
         <div class="row justify-content-center bg-light pb-4">
-        <small class="text-muted">Search by name ..</small>
+        <small class="text-muted">Search by company name ..</small>
         </div>
         <div class="row justify-content-center mt-5 pb-5 border-bottom">
                 <div class="col-md-4">

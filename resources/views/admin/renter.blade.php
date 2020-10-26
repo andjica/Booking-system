@@ -16,7 +16,8 @@
                 #ID {{$r->id}},
                     {{$r->company_name}}</h1>
                     <h4 class="text-right p-3 text-dark bg-warning rounded">
-                        Total earned by WDC platform 
+                    <a href="{{asset('/active-res/'.$r->id)}}">View active reservations</a> 
+
                         <span class="badge badge-secondary"></span></h4>
 
           </div>

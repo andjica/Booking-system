@@ -133,6 +133,17 @@ class AdminController extends Controller
 
     public function search()
     {
+        $q = request()->text;
+       
+        $countrenters =  Renter::where('company_name', 'LIKE', '%'. $q .'%')
+        ->count();
+
+        $renters = Renter::where('company_name', 'LIKE', '%'. $q .'%')
+            ->get();
+
+        return view('admin.search-by-renter', compact('renters', 'countrenters'));
+
+        
         
     }
 
