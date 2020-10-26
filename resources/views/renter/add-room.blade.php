@@ -18,8 +18,19 @@
                 <i class="fa fa-arrow-left"></i> Back
          </button> &nbsp; You are logged in!</h1>
           </div>
+        @if(\App\Renter::where('user_id', auth()->user()->id)->first() == null)
+        @php
+        header("Location: " . URL::to('/settings'), true, 302);
+        exit();
+    @endphp
+        @else
         <div class="row justify-content-center mt-5">
                 <div class="col-md-8  p-4 rounded border shadow-lg">
+                @if(session('success'))
+                <div class="alert alert-warning">
+                    {{session('success')}}
+                </div>
+                @endif
                 {{--  @if($account == 1 && auth()->user()->account->account_type_id == 1)
                     @if($count >= 3)
                         @include('components.card-payment')
@@ -43,7 +54,7 @@
                         </div>
                 @endif
                 @if(session('success'))
-                <div class="alert alert-success">
+                <div class="alert alert-warning">
                     {{session('success')}}
                 </div>
                 @endif
@@ -76,6 +87,7 @@
             @endif
             </div>
         </div>
+        @endif
 </div>
 </div>
 @endsection

@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Reservation;
 use App\User;
-
+use App\Renter;
 class HomeController extends Controller
 {
     /**
@@ -35,6 +35,11 @@ class HomeController extends Controller
         }
         elseif($user->role_id == 3)
         {
+            if(Renter::where('user_id', auth()->user()->id)->first() == null)
+            {
+                return redirect('settings');
+            }
+    
             return view('renter.index');
         }
         else

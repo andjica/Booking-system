@@ -26,6 +26,7 @@
               </button>
             </div>
           </div>
+
         <div class="row justify-content-center mt-5 pb-5 border-bottom">
                 <div class="col-md-4">
                 <div class="card text-center">
@@ -117,6 +118,7 @@
                     </div>
                 </div>
                 </div>
+              
             </div>
         </div>
 </div>
