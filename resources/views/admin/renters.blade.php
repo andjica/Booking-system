@@ -26,9 +26,12 @@
               </button>
             </div>
           </div>
-        <div class="row justify-content-center mt-5 pb-5 border-bottom">
+          
+        <div class="row mt-5 pb-5 border-bottom">
+        <p>Search renter by company name</p>  
+        <input class="form-control" id="myInput" type="text" placeholder="Search.."><br><br><br>
         <table class="table table-striped">
-                <thead>
+                <thead class="bg-light">
                     <tr>
                     <th scope="col">#ID</th>
                     <th scope="col">Company name</th>
@@ -36,12 +39,12 @@
                     <th scope="col">Telephone numm</th>
                     <th scope="col">Iban</th>
                     <th scope="col">Address</th>
-                    <th scope="col">Nummber of rooms</th>
-                    <th scope="col">View rooms </th>
-                    <th scope="col">View booked rooms </th>
+                    <th scope="col">Nummber of  created rooms</th>
+                    <th scope="col">Number of succeessfull<br> booked reservation </th>
+                    <th scope="col">Manage </th>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody id="myTable">
                     @foreach($renters as $r)
                     <tr>
                         <th scope="row">{{$r->id}}</th>
@@ -50,6 +53,9 @@
                         <td>{{$r->telephone_num}}</td>
                         <td>{{$r->iban}}</td>
                         <td>{{$r->address}},<br> {{$r->city->name}}&nbsp;{{$r->city->country->name}}</td>
+                        <td>{{ \App\Room::where('user_id', $r->user_id)->count()}}</td>
+                        <td>{{ \App\Reservation::where('renter_id', $r->user_id)->where('confirmed', 2)->count()}}</td>
+                        <td><a href="{{asset('/admin-renter/'.$r->id)}}">view</a></td>
                     </tr> 
                     @endforeach
                 </tbody>
@@ -59,7 +65,18 @@
             </div>
         </div>
 </div>
+<script>
+    $(document).ready(function(){
 
+$("#myInput").on("keyup", function() {
+ 
+  var value = $(this).val().toLowerCase();
+  $("#myTable tr").filter(function() {
+    $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+  });
+});
+});
+    </script>
 @endsection
 
 @section('css')
