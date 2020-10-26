@@ -110,6 +110,6 @@ Route::post('/contact-email', 'EmailController@contact')->name('contact-email');
 Route::get('/admin', 'AdminController@index')->name('admin');
 Route::get('/admin-renters', 'AdminController@renters')->name('admin-renters');
 Route::get('/admin-renter/{id}', 'AdminController@renter')->name('admin-renter/{id}');
-Route::get('/admin-delete-renter/{id}', 'AdminController@destory')->name('admin-delete-renter/{id}');
+Route::get('/admin-delete-renter/{id}', 'AdminController@destroy')->name('admin-delete-renter/{id}');
 
 
