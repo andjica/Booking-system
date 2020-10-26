@@ -8,6 +8,7 @@ use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use App\Role;
 use App\Account;
+use App\Renter;
 
 class User extends Authenticatable implements MustVerifyEmail
 {
@@ -39,5 +40,10 @@ class User extends Authenticatable implements MustVerifyEmail
     public function account()
     {
         return $this->hasOne(Account::class, 'user_id');
+    }
+
+    public function renter()
+    {
+        return $this->hasOne(Renter::class, 'user_id');
     }
 }

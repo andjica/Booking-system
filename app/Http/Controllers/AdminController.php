@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\Renter;
 class AdminController extends Controller
 {
     public function index()
@@ -13,6 +13,8 @@ class AdminController extends Controller
 
     public function renters()
     {
-        return view('admin.renters');
+        $renters = Renter::all();
+        
+        return view('admin.renters', compact('renters'));
     }
 }
