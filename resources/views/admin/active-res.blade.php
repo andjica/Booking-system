@@ -16,15 +16,15 @@
 
                 <button type="button" class="btn btn-info text-white" onclick="goBack()">
                 <i class="fa fa-arrow-left"></i> Back
-         </button> &nbsp; </h1>
+         </button> &nbsp; Active reservation of @isset($renter){{$renter->company_name}} @endisset</h1>
           </div>
           <h3><i class="fa fa-check fa-2x text-success"></i>Your acceptable reservations </h3><br>
         <div class="row">
         
             @foreach($res2 as $re2)
-            <div class="col-lg-3 mt-2">
+            <div class="col-lg-3 m-5">
             <div class="card">
-            <div class="card-header bg-success text-white">
+            <div class="card-header bg-light text-info">
                     Create at: {{$re2->created_at}}
                 </div>
                 <div class="card-body">
@@ -37,15 +37,12 @@
                     </svg>Check IN: {{$re2->start_date}}</h6>
                 </div>
                 <div class="card-footer bg-light">
-                    <a href="{{asset('/view-res/'.$re2->id)}}" class="card-link btn btn-primary">View more about this reservation</a>
+                    <a href="{{asset('/view-reservation/'.$re2->id)}}" class="card-link btn btn-primary">View invoice</a>
                     </div>
                 </div>
                 </div>
             @endforeach
-            <ul class="list-group">
-                <li class="list-group">  {{$res2->links()}}</li>
-                </ul>
-                </div>
+           
         </div>
      
 </div>

@@ -83,7 +83,8 @@
                 @isset($reservation)
                 <div class="tab-pane active bg-light" id="description" role="tabpanel">
                 
-                <p class="text-left">    <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-person-circle" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <p class="text-left">   
+                    <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-person-circle" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                             <path d="M13.468 12.37C12.758 11.226 11.195 10 8 10s-4.757 1.225-5.468 2.37A6.987 6.987 0 0 0 8 15a6.987 6.987 0 0 0 5.468-2.63z"/>
                             <path fill-rule="evenodd" d="M8 9a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
                             <path fill-rule="evenodd" d="M8 1a7 7 0 1 0 0 14A7 7 0 0 0 8 1zM0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8z"/>
@@ -99,12 +100,13 @@
                                 <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-wrench" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                                 <path fill-rule="evenodd" d="M.102 2.223A3.004 3.004 0 0 0 3.78 5.897l6.341 6.252A3.003 3.003 0 0 0 13 16a3 3 0 1 0-.851-5.878L5.897 3.781A3.004 3.004 0 0 0 2.223.1l2.141 2.142L4 4l-1.757.364L.102 2.223zm13.37 9.019L13 11l-.471.242-.529.026-.287.445-.445.287-.026.529L11 13l.242.471.026.529.445.287.287.445.529.026L13 15l.471-.242.529-.026.287-.445.445-.287.026-.529L15 13l-.242-.471-.026-.529-.445-.287-.287-.445-.529-.026z"/>
                                 </svg><span>&nbsp;Business:{{$reservation->role}}</span></p>
+                                <p class="text-muted">Email address: {{$reservation->user->email}}</p>
                     </div><Br>
                     <p class="text-muted"><b>Number of people:</b> {{$reservation->numberOfPeople}}<Br><Br>
                     Start date: {{$reservation->start_date}}<Br>
                     Valid until: {{$reservation->valid_until}}<Br>
                     Number of days: {{$reservation->number_of_days}}
-</p>
+                    </p>
                     <hr>
                     <div class="bg-light p-2">
                     <h5>Price for a day {{$room->prize}}</h5>

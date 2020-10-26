@@ -5,7 +5,7 @@
 <div class="container-fluid cont">
       <div class="row">
       @include('admin.sidebar')
-
+      @isset($r)
       <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
           <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
             <h1 class="h2">@if(session('success'))
@@ -13,21 +13,15 @@
                     {{session('success')}}
                 </div>
                 @endif
+                #ID {{$r->id}},
+                    {{$r->company_name}}</h1>
+                    <h4 class="text-right p-3 text-dark bg-warning rounded">
+                        Total earned by WDC platform 
+                        <span class="badge badge-secondary"></span></h4>
 
-                    You are logged in!</h1>
-            <div class="btn-toolbar mb-2 mb-md-0">
-              <div class="btn-group mr-2">
-                <button class="btn btn-sm btn-outline-secondary">Share</button>
-                <button class="btn btn-sm btn-outline-secondary">Export</button>
-              </div>
-              <button class="btn btn-sm btn-outline-secondary dropdown-toggle">
-                <span data-feather="calendar"></span>
-            
-              </button>
-            </div>
           </div>
         <div class="row">
-            @isset($r)
+           
             <div class="col-lg-6">  
             <div class="card border border-info shadow-lg">
                 <div class="card-body">
@@ -59,14 +53,26 @@
                 </div>
                 </div>
                 <div class="card text-white  mb-3" style="max-width: 22rem;">
-                <div class="card-header bg-success"><h5 class="card-title text-light">Number of successfully reservation</h5></div>
+                <div class="card-header bg-success"><h5 class="card-title text-light">Number of successfully reservation</h5>
+                    </div>
                 <div class="card-body">
                     
                     <button type="button" class="btn btn-success">
                        <span class="badge badge-light">{{ \App\Reservation::where('renter_id', $r->user_id)->where('confirmed', 2)->count()}}</span>
                         <span class="sr-only">unread messages</span>
+                        </button><br>
+                      <a href="{{asset('/active-res/'.$r->id)}}">View active reservations</a> 
+                </div>
+                </div>
+                <div class="card text-white  mb-3" style="max-width: 22rem;">
+                <div class="card-header bg-danger"><h5 class="card-title text-light">Number of dropped resservation</h5></div>
+                <div class="card-body">
+                    
+                    <button type="button" class="btn btn-danger">
+                       <span class="badge badge-danger">{{ \App\Reservation::where('renter_id', $r->user_id)->where('confirmed', 3)->count()}}</span>
+                        <span class="sr-only">unread messages</span>
                         </button>
-                       
+
                 </div>
                 </div>
             </div>
@@ -102,27 +108,34 @@
         <div class="row mt-5 pb-5 border-bottom">
         <p class="p-2">Rooms of @isset($r) {{$r->user->name}} from {{$r->company_name}} @endisset</p>  
         <input class="form-control m-2" id="myInput" type="text" placeholder="Search.."><br><br><br>
-        <table class="table table-striped m-2">
-                <thead class="bg-light">
-                    <tr>
-                    <th scope="col">#ID</th>
-                    <th scope="col">Room name</th>
-                    <th scope="col">Number of booked reservation for this room</th>
-                    <th scope="col">View room</th>
-                    <th scope="col">Delete room</th>
-                    </tr>
-                </thead>
-                <tbody id="myTable">
-                    @foreach($rooms as $r)
-                    <tr>
-                        <th scope="row">{{$r->id}}</th>
-                        <td>{{$r->name}}</td>
-                        <td>{{$r->user->name}}</td>
-                        <td><a href="{{asset('/room/'.$r->id)}}">View room</a></td>
-                    </tr> 
-                    @endforeach
-                </tbody>
-                </table>
+        <table class="table">
+      
+            <thead>
+                <tr>
+                <th scope="col">#</th>
+                <th scope="col">Name of room</th>
+                <th scope="col">Square</th>
+                <th scope="col">Number of rooms</th>
+                <th scope="col">Price for a day</th>
+                <th scope="col">View all information about room</th>
+           
+                </tr>
+            </thead>
+            <tbody>
+            @foreach($rooms as $r)
+                <tr>
+                <th scope="row">{{$r->id}}</th>
+                <td>{{$r->name}}</td>
+                <td>{{$r->square}}</td>
+                <td>{{$r->number_of_rooms}}</td>
+                <td>{{$r->prize}}</td>
+                <td><a href="{{asset('/room/'.$r->id)}}" class="btn btn-info"><i class="fa fa-home text-secondary"></i>&nbsp;View more about this room</a></td>
+                
+                </tr>
+                
+              @endforeach
+            </tbody>
+            </table>
                 </div>
                 </div>
             </div>

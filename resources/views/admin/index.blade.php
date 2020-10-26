@@ -26,6 +26,17 @@
               </button>
             </div>
           </div>
+          <div class="row justify-content-center p-5 bg-light">
+           <form class="form-inline" method="GET" action="{{route('search-by-name')}}">
+               @csrf
+                <input class="form-control m-2" id="myInput" type="text" placeholder="Search.." style="width:500px;">
+                <button type="submit" class="btn btn-info">Search </button>
+                
+            </form>    
+        </div>
+        <div class="row justify-content-center bg-light pb-4">
+        <small class="text-muted">Search by name ..</small>
+        </div>
         <div class="row justify-content-center mt-5 pb-5 border-bottom">
                 <div class="col-md-4">
                 <div class="card text-center">
@@ -72,51 +83,7 @@
                 </div>
                 </div>
             
-            <div class="row justify-content-center mt-5 bg-light pb-5">
-
-                <div class="col-md-4 mt-3">
-                <div class="card text-center">
-                    <div class="card-header ">
-                    <i class="fas fa-question-circle fa-3x text-success"></i>
-                    </div>
-                    <div class="card-body">
-                        <h5 class="card-title">Contact Admin and Support Team <i class="fas fa-hammer"></i></h5>
-                        <p class="card-text">Do you have any problem with our website platform or you need any more information. Please, contact US!</p>
-                        <a href="{{route('support-team')}}" class="btn btn-success">Contact here &nbsp;<i class="fa fa-plus-square text-white"></i></a>
-                    </div>
-                   
-                    </div>
-                </div>
-
-                <div class="col-md-4 mt-3">
-                <div class="card text-center">
-                    <div class="card-header ">
-                    <i class="fas fa-question-circle fa-3x text-success"></i>
-                    </div>
-                    <div class="card-body">
-                        <h5 class="card-title">Contact for help <i class="fas fa-medkit text-muted"></i></h5>
-                        <p class="card-text">Contact Admin for more help - especially if you have problems with your email, password or programmering bugs</p>
-                        <a href="{{route('support-admin')}}" class="btn btn-success">Contact here &nbsp;<i class="fa fa-plus-square text-white"></i></a>
-                    </div>
-                   
-                    </div>
-                </div>
-
-                <div class="col-md-4 mt-3">
-                <div class="card text-center">
-                    <div class="card-header ">
-                    <i class="fas fa-money-check-alt fa-3x text-warning"></i> <i class="fas fa-question-circle fa-2x text-success"></i>
-                    </div>
-                    <div class="card-body">
-                        <h5 class="card-title">Contact Our Accounting management Team <i class="fa fa-heart text-danger"></i></h5>
-                        <p class="card-text">Contact for your accounting information - invoices..</p>
-                        <a href="{{route('support-accounting')}}" class="btn btn-success">Contact here &nbsp;<i class="fa fa-plus-square text-white"></i></a>
-
-                    </div>
-                   
-                    </div>
-                </div>
-                </div>
+            
             </div>
         </div>
 </div>

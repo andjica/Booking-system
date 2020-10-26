@@ -111,5 +111,9 @@ Route::get('/admin', 'AdminController@index')->name('admin');
 Route::get('/admin-renters', 'AdminController@renters')->name('admin-renters');
 Route::get('/admin-renter/{id}', 'AdminController@renter')->name('admin-renter/{id}');
 Route::get('/admin-delete-renter/{id}', 'AdminController@destroy')->name('admin-delete-renter/{id}');
+Route::get('/active-res/{id}', 'AdminController@active')->name('active-res/{id}');
+Route::get('/view-reservation/{id}', 'AdminController@viewres')->name('view-reservation/id');
+Route::get('/admin-users', 'AdminController@users')->name('admin-users');
+Route::get('/search-by-name', 'AdminController@search')->name('search-by-name');
 
 
