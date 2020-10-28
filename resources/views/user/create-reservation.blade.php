@@ -64,14 +64,14 @@ if(isset($arrayOfDisableDates))
                                                         <li>
                                                             <div class="single_info_doc">
                                                                 <img src="{{asset('/')}}img/svg_icon/square.svg" alt="" class="andjica-icon">
-                                                                <span>{{$room->square}}Sqft</span> &nbsp;&nbsp;
+                                                                <span>{{$room->square}}m2</span> &nbsp;&nbsp;
                                                                 <img src="{{asset('/')}}img/svg_icon/bed.svg" alt="" class="andjica-icon">
                                                                 <span>{{$room->beds}}</span>&nbsp;&nbsp;
                                                                 <img src="{{asset('/')}}img/svg_icon/bath.svg" alt="" class="andjica-icon">
                                                                 <span>{{$room->number_of_bath}} Bath</span>&nbsp;&nbsp;
                                                                  <i class="fa text-danger fa-paw"></i>&nbsp;Pets {{$room->pets}}
 
-                                                                <span class="badge badge-warning"><span class="amount">From ${{$room->prize}}</span> per night</span>
+                                                                <span class="badge badge-warning"><span class="amount">From ${{$room->prize}}</span> per day</span>
 
                                                             </div>
                                                         </li>
@@ -117,12 +117,12 @@ if(isset($arrayOfDisableDates))
                                       <div class="row px-3 mt-1 mb-5">
                                           <div class="custom-control custom-checkbox">
                                                 <input checked id="customCheck1" type="checkbox" class="custom-control-input">
-                                                 <label for="customCheck1" class="custom-control-label">I want to receive promo emails</label>
+                                                 <label for="customCheck1" class="custom-control-label">I accept the terms and policy</label>
                                          </div>
                                         </div>
                                         <div class="row px-3 mt-1 mb-5">
                                         <p class="prev text-danger"><span class="fa fa-long-arrow-left"  id="back"> Go Back</span></p>
-                                        <div class="next-button text-center mt-1 ml-2" id="first-next" data-id="{{$room->id}}">Next <span class="fa fa-arrow-right"></span> </div>
+                                        <div class="next-button text-center mt-1 ml-2 mobilic" id="first-next" data-id="{{$room->id}}">Next <span class="fa fa-arrow-right"></span> </div>
                                         </div>
 
                                     </div>
@@ -204,7 +204,7 @@ if(isset($arrayOfDisableDates))
 		            				</div>
 		            				<div class="bill-item people">
 		            					<div class="bill-unit">
-		            						Adult : <span id="numberOfAdults"></span>
+		            						Adults : <span id="numberOfAdults"></span>
 		            					</div>
 		            				</div>
                                     <div class="bill-item people">
@@ -237,17 +237,11 @@ if(isset($arrayOfDisableDates))
 											<span class="checkmark"></span>
 										</label>
 										<label>
-											<input type="radio" name="payment" value="10% Deposit"> 10% Deposit
+											<input type="radio" name="payment" value="10% Deposit"> 
 											<span class="checkmark"></span>
 										</label>
 									</div>
-									<div class="bill-item total">
-		            					<div class="bill-unit">
-		            						<span>20% Deposit</span>
-		            						Pay the rest on arrival
-		            					</div>
-		            					<span class="price">$78</span>
-		            				</div>
+								
 	                			</div>
 	            			</div>
 
@@ -270,6 +264,36 @@ if(isset($arrayOfDisableDates))
             </div>
 
             <style>
+
+              
+    @media screen and (max-width:768px){
+      #progressbar{
+        left:25px !important;
+      }
+      .mobilic{
+        width:100% !important;
+      }
+      .card1{
+        text-align:center;
+        height: 320px;
+      }
+  #progressbar li {
+      list-style-type: none;
+      font-size: 8px;
+      font-weight: 400;
+      margin-bottom: 18px;
+      } 
+      .img-fluid{
+        height: auto !important;
+      }
+      .carousel-item .active
+      {
+        padding-right: 15px !important;
+        margin-left: auto !important;
+
+      }
+    }
+
             @font-face {
   font-family: "Poppins-Regular";
   src: url("../fonts/poppins/Poppins-Regular.ttf"); }

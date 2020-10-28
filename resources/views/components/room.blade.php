@@ -27,7 +27,7 @@
                                     <li>
                                         <div class="single_info_doc col-lg-4 ">
                                             <img src="img/svg_icon/square.svg" alt="">
-                                            <span>155.00Sqft</span>
+                                            <span>155.00 m2</span>
                                         </div>
                                     </li>
                                     <li>

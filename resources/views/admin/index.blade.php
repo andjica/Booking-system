@@ -75,8 +75,8 @@
                     </div>
                     <div class="card-body">
                         <h5 class="card-title">Booking</h5>
-                        <p class="card-text">Who make reservation? You can see reservation book for your rooms</p>
-                        <a href="{{route('reservations')}}" class="btn btn-primary">Manage reservation</a>
+                        <p class="card-text">See all invoices</p>
+                        <a href="{{route('admin-invoices')}}" class="btn btn-primary">Find invoice</a>
                     </div>
                     
                     </div>

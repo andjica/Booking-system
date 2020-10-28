@@ -9,7 +9,7 @@
     </li>
     <li>
        <div class="footer_pro">
-              <ul class="list-inline shadow-lg bg-light mb-4" style="font-weight: 700">
+              <ul class="list-inline shadow-lg bg-light mb-4 jgb" style="font-weight: 700">
               <li class="list-inline-item">
                       <div class="single_info_doc ml-4">
                           <img src="{{asset('/')}}img/svg_icon/location.svg" alt="" style="size:15px">
@@ -19,7 +19,7 @@
               <li class="list-inline-item">
                   <div class="single_info_doc">
                       <img src="{{asset('/')}}img/svg_icon/square.svg" alt="">
-                      <span>{{$room->square}}Sqft</span>
+                      <span>{{$room->square}}m2</span>
                   </div>
               </li>
               <li class="list-inline-item">
@@ -49,7 +49,7 @@
                                    
       <div class="row  shadow-md p-2">
       <a  class="link" href="#" data-toggle="modal" data-target="#exampleModal">
-        <div class="col-lg-6 mt-2 mr-0 pr-0">
+        <div class="col-lg-6 mt-2 mr-0 ">
         @foreach ($img as $pic)
             @if ($loop->first)
             <div class="carousel-item active ">
@@ -93,7 +93,7 @@
               <li class="list-inline-item mt-4">
                   <div class="single_info_doc">
                       <img src="{{asset('/')}}img/svg_icon/square.svg" alt="" style="width:20px">
-                      <span>Room size: {{$room->square}}Sqft</span>
+                      <span>Room size: {{$room->square}}m2</span>
                   </div>
               </li>
               <li class="list-inline-item mt-4">
@@ -211,3 +211,26 @@
     </div>
   </div>
 </div>
+
+<Style>
+@media screen and (max-width:768px){
+  .jgb{
+    font-weight: 700;
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+  h3 {
+    width: 100% !important;
+    text-align: center;
+}
+.card0 {
+    background-color: #F5F5F5;
+    border-radius: 8px;
+    z-index: 0;
+    width: 100% !important;
+    text-align: center;
+    padding: 10px !important;
+}
+}
+  </style>

@@ -147,4 +147,13 @@ class AdminController extends Controller
         
     }
 
+    public function invoice()
+    {
+        $res2 = Reservation::where('renter_id', $user)
+        ->where('confirmed', 2)
+        ->orderBy('created_at', 'desc')->get();
+        
+        return view('admin.invoice', compact('res2'));
+    }
+
 }

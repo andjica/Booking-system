@@ -115,5 +115,5 @@ Route::get('/active-res/{id}', 'AdminController@active')->name('active-res/{id}'
 Route::get('/view-reservation/{id}', 'AdminController@viewres')->name('view-reservation/id');
 Route::get('/admin-users', 'AdminController@users')->name('admin-users');
 Route::get('/search-by-name', 'AdminController@search')->name('search-by-name');
-
+Route::get('/admin-invoices', 'AdminController@invoice')->name('admin-invoices');
 

@@ -5,8 +5,12 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Real state</title>
-    <meta name="description" content="">
+    <meta name="description" content="Hire Luxery property's for media jobs, films shooting, shooting on locations, media locations.">
+  <meta name="author" content="">
+  <meta name="keywords" content="booking, boeking locatie, booking locations, booking locations for media jobs, films shooting, shooting on locations, media locations.">
+
+
+  <title>Booking Locations - Hire Media Property's, Hotels, Luxery rooms for media jobs.</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- <link rel="manifest" href="site.webmanifest"> -->
