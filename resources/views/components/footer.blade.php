@@ -59,7 +59,7 @@
                                     Partner program
                             </h3>
                             <ul>
-                                <li><a href="{{asset('/')}}">About</a></li>
+                                <li><a href="{{asset('/about')}}">About</a></li>
                                 <li><a href="{{asset('/')}}">Blog</a></li>
                                 <li><a href="{{asset('/contact')}}"> Contact</a></li>
                                 <li><a href="{{asset('/contact')}}">Appointment</a></li>
@@ -72,7 +72,7 @@
                                     Partner program
                             </h3>
                             <ul>
-                                <li><a href="{{asset('/')}}">About</a></li>
+                                <li><a href="{{asset('/about')}}">About</a></li>
                                 <li><a href="{{asset('/register')}}">Become a renter</a></li>
                                 <li><a href="{{asset('/contact')}}"> Contact</a></li>
                                 <li><a href="{{asset('/contact')}}">Appointment</a></li>

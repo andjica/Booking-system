@@ -47,6 +47,7 @@ Route::get('/booker/{id}', 'FrontController@booker')->name('booker/{id}');
 Route::get('/search', 'FrontController@search')->name('search');
 Route::get('/all', 'FrontController@all')->name('all');
 Route::get('/contact', 'FrontController@contact')->name('contact');
+Route::get('/about', 'FrontController@about')->name('about');
 //stripe
 Route::post('/stpaypro', 'StripeController@paypro')->name('stpaypro');
 Route::post('/stpayex', 'StripeController@payex')->name('stpayex');
