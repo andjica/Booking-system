@@ -62,8 +62,9 @@
         <div class="row align-items-center">
         <div class="col-xl-12 lign-items-center">
         <div class="slider_text text-center justify-content-center">
-            <h3><i class="fa fa-map-marker-alt text-info"></i>Find your best Property</h3>
-            <p>Find a place for a perfect photo <i class="fa fa-camera text-warning"></i></p>
+            <h3><i class="fa fa-map-marker-alt text-info"></i>FIND YOU IDEAL SHOOT LOCATION</h3>
+            <p>The place to be for producers & more <a href="https://worldmediacrew.com/" class="text-warning">(/crew members)</a> 
+ <i class="fa fa-camera text-warning"></i></p>
         </div>
             <div class="property_form">
                
@@ -87,7 +88,7 @@
             <div class="row">
                 <div class="col-xl-12">
                     <div class="section_title mb-40 text-center">
-                        <h3>Popular Locations and Apartments</h3>
+                        <h3>World Media Crew Locations - The Place To Be for Shoot Locations</h3>
                     </div>
                 </div>
             </div>
@@ -201,11 +202,13 @@
                                 </div>
                     </div>
                     <div class="col-xl-5 col-md-5">
-                    <div class="card border-warning mb-3 andjica-card" style="max-width: 28rem;">
+                    <div class="card border-warning mb-3 andjica-card shadow-lg" style="max-width: 28rem;">
                         <div class="card-header"><img src="{{asset('/')}}img/logo2.png" class="img-fluid"></div>
                         <div class="card-body text-warning">
-                            <h5 class="card-title">Warning card title</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <h5 class="card-title">World Media Crew Locations - The Place To Be for Shoot Locations&nbsp;<i class="fa fa-camera text-warning"></i> </h5>
+                            <p class="card-text">
+                                Our World Media Crew Blog takes you on an adventure with us in the world of Media Productions and Professionals.
+                                </p>
                         </div>
                         </div>
                     </div>
@@ -225,7 +228,7 @@
                             <div class="col-xl-12">
                                 <div class="section_title mb-40 text-center">
                                     <h3>
-                                            Our Partners
+                                            Our Team
                                     </h3>
                                 </div>
                             </div>
@@ -344,24 +347,7 @@
         </div>
     <!-- /team_area  -->
     
-    <!-- contact_action_area  -->
-    <div class="contact_action_area">
-        <div class="container">
-            <div class="row">
-                <div class="col-xl-7">
-                    <div class="action_heading">
-                        <h3>Add your Location To WMC Locations</h3>
-                    </div>
-                </div>
-                <div class="col-xl-5">
-                    <div class="call_add_action">
-                        <span>+316 57880170</span>
-                        <a href="{{asset('./home')}}" class="boxed-btn3-line">Add Location Space</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    @include('components.action-area')
     <!-- /contact_action_area  -->
 @endsection
 @section('css')

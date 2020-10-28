@@ -9,7 +9,7 @@
                             <div class="col-xl-3 col-lg-2">
                                 <div class="logo  vb">
                                     <a href="{{asset('/')}}">
-                                        <img src="{{asset('/')}}img/logic.png" alt="" style="    width: 140px;   position: relative;   top: -9px;">
+                                        <img src="{{asset('/')}}img/logic.png" alt="" style="    width: 170px; ">
                                     </a>
                                 </div>
                             </div>

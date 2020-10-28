@@ -28,7 +28,7 @@
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="#">
+                                        <a href="https://www.instagram.com/wmclocations/?igshid=16l96vvo67d0">
                                             <i class="fa fa-instagram"></i>
                                         </a>
                                     </li>
@@ -48,6 +48,7 @@
                                 <li><a href="{{asset('/home')}}">Finance Locations</a></li>
                                 <li><a href="{{asset('/home')}}">My Account</a></li>
                                 <li><a href="{{asset('/login')}}">Login & Register</a></li>
+                                <li><a href="https://worldmediacrew.com/" class="text-warning">Become Crew members</a></li>
                             </ul>
 
                         </div>

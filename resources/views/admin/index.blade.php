@@ -38,7 +38,7 @@
         <small class="text-muted">Search by company name ..</small>
         </div>
         <div class="row justify-content-center mt-5 pb-5 border-bottom">
-                <div class="col-md-4">
+                <div class="col-md-6">
                 <div class="card text-center">
                     <div class="card-header ">
                     <i class="fa fa-home fa-3x text-danger"></i>
@@ -51,23 +51,8 @@
                    
                     </div>
                 </div>
-                <div class="col-md-4">
-                <div class="card text-center">
-                    <div class="card-header">
-                    <i class="fa fa-home fa-2x text-info"></i>
-                    <i class="fa fa-home fa-3x text-secondary"></i>
-                    <i class="fa fa-home fa-2x text-success"></i>
-                    
-                    </div>
-                    <div class="card-body">
-                        <h5 class="card-title">See your rooms</h5>
-                        <p class="card-text">Lets see your rooms, edit and delete it! Make a very unique description for room</p>
-                        <a href="{{route('rooms')}}" class="btn btn-primary">See more</a>
-                    </div>
-                   
-                    </div>
-                </div>
-                <div class="col-md-4">
+            
+                <div class="col-md-6">
                 <div class="card text-center">
                     <div class="card-header">
                     <i class="fa fa-clipboard text-primary fa-3x"></i>

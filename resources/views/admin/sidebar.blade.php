@@ -2,7 +2,7 @@
           <div class="sidebar-sticky">
             <ul class="nav flex-column">
               <li class="nav-item">
-                <a class="nav-link active" href="#">
+                <a class="nav-link active" href="{{route('admin')}}">
                   <span data-feather="home"></span>
                   Dashboard <span class="sr-only">(current)</span>
                 </a>
@@ -19,7 +19,13 @@
                   Users
                 </a>
               </li>
-             
+              <li class="nav-item">
+                <a class="nav-link" href="{{route('admin-invoices')}}">
+                  <span data-feather="shopping-cart"></span>
+                  Invoices
+                </a>
+              </li>
+              
             </ul>
 
             

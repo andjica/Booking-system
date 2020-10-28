@@ -299,23 +299,7 @@
         </div>
     <!-- /team_area  -->
     <!-- contact_action_area  -->
-    <div class="contact_action_area">
-        <div class="container">
-            <div class="row">
-                <div class="col-xl-7">
-                    <div class="action_heading">
-                        <h3>Add your Location To WMC Locations</h3>
-                    </div>
-                </div>
-                <div class="col-xl-5">
-                    <div class="call_add_action">
-                        <span>+316 57880170</span>
-                        <a href="{{asset('./home')}}" class="boxed-btn3-line">Add Location Space</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    @include('components.action-area')
     <!-- /contact_action_area  -->
     <script>
        $(document).ready(function(){
