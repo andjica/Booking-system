@@ -62,8 +62,8 @@
         <div class="row align-items-center">
         <div class="col-xl-12 lign-items-center">
         <div class="slider_text text-center justify-content-center">
-            <h3><i class="fa fa-map-marker-alt text-info"></i>FIND YOU IDEAL SHOOT LOCATION</h3>
-            <p>The place to be for producers & more <a href="https://worldmediacrew.com/" class="text-warning">(/crew members)</a> 
+            <h3><i class="fa fa-map-marker-alt text-info"></i>FIND YOUR IDEAL SHOOT LOCATION</h3>
+            <p>The place to be for producers & more <a href="https://worldmediacrew.com/" class="text-warning">(crew members)</a> 
  <i class="fa fa-camera text-warning"></i></p>
         </div>
             <div class="property_form">
