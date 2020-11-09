@@ -35,8 +35,8 @@
                     </div>
                     <div class="card-body">
                         <h5 class="card-title">Welcome {{auth()->user()->name}} <i class="fa fa-heart text-danger"></i></h5>
-                        <p class="card-text">This is a dashboard for you, here you can insert your rooms.</p>
-                        <a href="{{asset('/create-room')}}" class="btn btn-primary">Add new room <i class="fa fa-plus-square text-warning"></i></a>
+                        <p class="card-text">This is a dashboard for you, here you can insert your Locations.</p>
+                        <a href="{{asset('/create-room')}}" class="btn btn-primary">Add new Locations <i class="fa fa-plus-square text-warning"></i></a>
                     </div>
                    
                     </div>
@@ -50,8 +50,8 @@
                     
                     </div>
                     <div class="card-body">
-                        <h5 class="card-title">See your rooms</h5>
-                        <p class="card-text">Lets see your rooms, edit and delete it! Make a very unique description for room</p>
+                        <h5 class="card-title">See your Locations</h5>
+                        <p class="card-text">Lets see your Locations, edit and delete it! Make a very unique description for room</p>
                         <a href="{{route('rooms')}}" class="btn btn-primary">See more</a>
                     </div>
                    
@@ -65,7 +65,7 @@
                     </div>
                     <div class="card-body">
                         <h5 class="card-title">Booking</h5>
-                        <p class="card-text">Who make reservation? You can see reservation book for your rooms</p>
+                        <p class="card-text">Who make reservation? You can see reservation book for your Locations</p>
                         <a href="{{route('reservations')}}" class="btn btn-primary">Manage reservation</a>
                     </div>
                     

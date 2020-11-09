@@ -43,9 +43,8 @@
                                     Services
                             </h3>
                             <ul>
-                                <li><a href="{{asset('/all')}}">All locations</a></li>
+                                <li><a href="{{asset('/all')}}"> locations</a></li>
                                 <li><a href="{{asset('/')}}">Search Locations</a></li>
-                                <li><a href="{{asset('/home')}}">Finance Locations</a></li>
                                 <li><a href="{{asset('/home')}}">My Account</a></li>
                                 <li><a href="{{asset('/login')}}">Login & Register</a></li>
                                 <li><a href="https://worldmediacrew.com/" class="text-warning">Become Crew members</a></li>
@@ -60,7 +59,6 @@
                             </h3>
                             <ul>
                                 <li><a href="{{asset('/about')}}">About</a></li>
-                                <li><a href="{{asset('/')}}">Blog</a></li>
                                 <li><a href="{{asset('/contact')}}"> Contact</a></li>
                                 <li><a href="{{asset('/contact')}}">Appointment</a></li>
                             </ul>

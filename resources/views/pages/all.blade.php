@@ -82,7 +82,7 @@
         
         <div class="serach_icon border-top mt-andjica">
         <button type="submit" class="btn btn-warning mt-3 btn-block">
-        Search<i class="ti-search text-white fa-2x mt-5"></i></button>
+        Search <i class="ti-search text-white fa-1x mt-5"></i></button>
              
                        
                 
@@ -92,7 +92,7 @@
 
 </div>
 
-    <div class="col-lg-8">
+    <div class="col-lg-9">
         <div class="row">
             @foreach($rooms as $room)
            
@@ -126,7 +126,7 @@
                                     <li>
                                         <div class="single_info_doc">
                                             <img src="img/svg_icon/square.svg" alt="">
-                                            <span>{{$room->square}}Sqft</span>
+                                            <span>{{$room->square}}m2</span>
                                         </div>
                                     </li>
                                     <li>

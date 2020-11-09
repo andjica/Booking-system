@@ -24,10 +24,10 @@
 <section class="mb-4">
 
     <!--Section heading-->
-    <h2 class="h1-responsive font-weight-bold text-center my-4">Contact Accounting team <img src="{{asset('/img/')}}/logo2.png" class="img-fluid" width="250px"></h2>
+    <h2 class="h1-responsive font-weight-bold text-center my-4">Contact Account team <img src="{{asset('/img/')}}/logo2.png" class="img-fluid" width="250px"></h2>
     <!--Section description-->
     <p class="text-center w-responsive mx-auto mb-5"> 
-For accounting information as well as changes you want regarding your payment order and the rest of us the team is always there to help you.
+For Account information as well as changes you want regarding your payment order and the rest of us the team is always there to help you.
     </p>
 
     <div class="row border p-5">

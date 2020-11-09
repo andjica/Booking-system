@@ -135,7 +135,7 @@
                                     <li>
                                         <div class="single_info_doc">
                                             <img src="img/svg_icon/square.svg" alt="">
-                                            <span>{{$room->square}}Sqft</span>
+                                            <span>{{$room->square}}m2</span>
                                         </div>
                                     </li>
                                     <li>

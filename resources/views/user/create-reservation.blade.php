@@ -138,12 +138,12 @@ if(isset($arrayOfDisableDates))
                                                     <h4 class="text-center"> Fill here in your details </h4>
                                                 <div class="row">
                                                         <div class="col-lg-6">
-                                                            <p>Firstname</p>
+                                                            <p>Firstname & Lastname</p>
                                                         <input type="text" class="form-control" placeholder="" id="firstName">
                                                             <div id="name-error"></div>
                                                         </div>
                                                         <div class="col-lg-6">
-                                                        <p>Last name</p>
+                                                        <p>Company Name</p>
 
                                                         <input type="text" class="form-control" placeholder="" id="lastName">
                                                             <div id="last-name-error"></div>

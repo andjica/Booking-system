@@ -4,9 +4,9 @@
 
 <div class="container">
 <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center cont">
-  <h1 class="display-4"><i class="fa fa-shopping-cart fa-2x"></i>Pricing with credit card</h1>
-  <p class="lead">Quickly build an effective pricing table for your potential customers with this Bootstrap 
-  example. It’s built with default Bootstrap components and utilities with little customization.</p>
+  <h1 class="display-4"><i class="fa fa-shopping-cart fa-2x"></i>Payment with credit card</h1>
+  <p class="lead">Thank you for your reservation, after the succesfull payment you will receive a confirmation by mail.
+  Check your mailbox for the confirmation.</p>
   
 </div>
 </div>

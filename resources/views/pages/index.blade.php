@@ -62,9 +62,8 @@
         <div class="row align-items-center">
         <div class="col-xl-12 lign-items-center">
         <div class="slider_text text-center justify-content-center">
-            <h3><i class="fa fa-map-marker-alt text-info"></i>FIND YOUR IDEAL SHOOT LOCATION</h3>
-            <p>The place to be for producers & more <a href="https://worldmediacrew.com/" class="text-warning">(crew members)</a> 
- <i class="fa fa-camera text-warning"></i></p>
+            <h3><i class="fa fa-map-marker-alt text-info"></i>FIND YOUR SHOOT LOCATION</h3>
+            <p>The place to be for producers & more </p>
         </div>
             <div class="property_form">
                
@@ -88,7 +87,7 @@
             <div class="row">
                 <div class="col-xl-12">
                     <div class="section_title mb-40 text-center">
-                        <h3>World Media Crew Locations - The Place To Be for Shoot Locations</h3>
+                        <h3>World Media Crew Locations <br>The Place To Be for Shoot Locations</h3>
                     </div>
                 </div>
             </div>
@@ -124,7 +123,7 @@
                                     <li>
                                         <div class="single_info_doc">
                                             <img src="img/svg_icon/square.svg" alt="">
-                                            <span>{{$room->square}}Sqft</span>
+                                            <span>{{$room->square}}m2</span>
                                         </div>
                                     </li>
                                     <li>
@@ -222,7 +221,7 @@
 </div>
 </div>
  
-    <div class="team_area">
+ <!--   <div class="team_area">
             <div class="container">
                     <div class="row">
                             <div class="col-xl-12">
@@ -344,7 +343,7 @@
                             </div>
                         </div>
             </div>
-        </div>
+        </div> -->
     <!-- /team_area  -->
     
     @include('components.action-area')

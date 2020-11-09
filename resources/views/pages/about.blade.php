@@ -100,10 +100,7 @@
                             <i class="fas fa-smile-wink text-info"></i></h3>
                         </div>
                         <div class="card-text">
-                        <div class="counter">
-                                <h2 class="timer count-title count-number" data-to="100" data-speed="1200"></h2>
-                                <p class="count-text">More than 100 first parthners</p>
-                            </div>
+                       
                             <h4 class="mbr-content-title mbr-bold mbr-fonts-style display-7">
                                 Lessons</h4>
                             <p class="mbr-content-text mbr-fonts-style display-7">
@@ -122,10 +119,7 @@
                             <i class="fas fa-smile-beam text-warning"></i></h3>
                         </div>
                         <div class="card-text">
-                            <div class="counter">
-                                <h2 class="timer count-title count-number" data-to="129" data-speed="1200"></h2>
-                                <p class="count-text">Our first happy clients</p>
-                            </div>
+                           
                             <h4 class="mbr-content-title mbr-bold mbr-fonts-style display-7">
                                 Happy feeling</h4>
                             <p class="mbr-content-text mbr-fonts-style display-7">
@@ -141,10 +135,7 @@
                            </h3>
                         </div>
                         <div class="card-text">
-                            <div class="counter">
-                                <h2 class="timer count-title count-number" data-to="405" data-speed="1200"></h2>
-                                <p class="count-text ">So many locations over the world</p>
-                            </div>
+                           
                             <h4 class="mbr-content-title mbr-bold mbr-fonts-style display-7">
                                 Search for location</h4>
                             <p class="mbr-content-text mbr-fonts-style display-7">
@@ -162,10 +153,7 @@
                             </h3>
                         </div>
                         <div class="card-texts">
-                                <div class="counter">
-                                <h2 class="timer count-title count-number" data-to="150" data-speed="1200"></h2>
-                                <p class="count-text ">Apartaments</p>
-                                </div>
+                                
                             <h4 class="mbr-content-title mbr-bold mbr-fonts-style display-7">
                                 What we offer</h4>
                             <p class="mbr-content-text mbr-fonts-style display-7">

@@ -33,7 +33,7 @@ class ConfirmationEmail extends Mailable
         
         $email = auth()->user()->email;
     
-        $emails = array($email, "developersforanymarket@gmail.com", 'andjaaa95@gmail.com');
+        $emails = array($email, "info@wmclocations.com", 'andjaaa95@gmail.com');
 
         
             return $this->from($email)

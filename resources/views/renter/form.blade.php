@@ -1,10 +1,10 @@
 <form action="{{route('insert-room')}}" method="POST">
-                <h4>Insert a new Room / Apartament</h4>
+                <h4>Insert a new location / Apartament</h4>
                 @csrf
                 <Br>
                 <div class="row bg-light p-3">
                     <div class="col">
-                    <label for="roomname">Name of room</label>
+                    <label for="roomname">Name of location</label>
                     <input type="text" class="form-control" id="roomname" name="title" placeholder="Alexandar Room star">
                     @if ($errors->has('title'))  <p style="color:red;">{{$errors->first('title')}}</p> @endif
                     </div>
@@ -31,21 +31,21 @@
                 <div class="row bg-light p-3">
                     <div class="col">
                     <div class="form-group">
-                        <label for="desc1">Medium Description of room</label>
+                        <label for="desc1">Medium Description of location</label>
                             <textarea class="form-control" name="desc1"></textarea>
                             @if ($errors->has('desc1'))  <p style="color:red;">{{$errors->first('desc1')}}</p> @endif
                         </div>
                     </div>
                     <div class="col">
                     <div class="form-group">
-                        <label for="desc2">More Description of room</label>
+                        <label for="desc2">Description of style</label>
                             <textarea class="form-control" name="desc2"></textarea>
                             @if ($errors->has('desc2'))  <p style="color:red;">{{$errors->first('desc2')}}</p> @endif
                         </div>
                     </div>
                     <div class="col">
                     <div class="form-group">
-                        <label for="desc3">More Description of room</label>
+                        <label for="desc3">Tags of location</label>
                             <textarea class="form-control" name="desc3"></textarea>
                             @if ($errors->has('desc3'))  <p style="color:red;">{{$errors->first('desc3')}}</p> @endif
                         </div>
@@ -105,7 +105,7 @@
                         </div>
                 
                     <div class="col">
-                        <label for="roomname">Address of hotel or rooms or apartament</label>
+                        <label for="roomname">Address of hotel or location or apartament</label>
                         <select  class="form-control border-warning bg-light andjicasel" id="sel_depart" name="country">   
                         <option value="0" class="form-control">Select country</option>                         
                                 @foreach($countries as $c)
