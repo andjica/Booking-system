@@ -28,7 +28,7 @@
                                             <li><a class="" href="https://worldmediacrew.com/">Crew Members</a></li>
 
                                             <li><a href="{{asset('./register')}}"></a></li>
-                                            <li><a href="#">Become a renter <i class="ti-angle-down"></i></a>
+                                            <li><a href="#">Become a Hoster <i class="ti-angle-down"></i></a>
                                                 <ul class="submenu">
                                                     <li><a href="{{asset('/register')}}">Register</a></li>
                                                     <li><a href="{{asset('/login')}}">Login</a></li>
@@ -75,27 +75,27 @@
 			<div class="row ">
 				<ul class="xd">
 					<li class="item-menu-mobile bb">
-					<i class="fa fa-home faks"></i>
+					<a class="lilf" href="{{asset('/')}}"><i class="fa fa-home faks"></i></a>
 						<a class="lilf" href="{{asset('/')}}">Home</a>
 					</li>
 
 					<li class="item-menu-mobile bb">
-					<i class="fa fa-search faks"></i>
+					<a class="lilf" href="{{asset('/')}}"><i class="fa fa-search faks"></i></a>
 						<a class="lilf" href="{{asset('/')}}">Search</a>
 					</li>
 
 					<li class="item-menu-mobile bb">
-					<i class="fa fa-map-marker faks"></i>
+					<a class="lilf" href="{{asset('/all')}}"><i class="fa fa-map-marker faks"></i></a>
 						<a class="lilf" href="{{asset('/all')}}">Locations</a>
 					</li>
 
 					<li class="item-menu-mobile bb">
-					<i class="fa fa-tags faks"></i>
+					<a class="lilf" href="{{asset('/all')}}"><i class="fa fa-tags faks"></i></a>
 						<a class="lilf" href="{{asset('/all')}}">Hotspots</a>
 					</li>
 
 					<li class="item-menu-mobile bb">
-					<i class="fa fa-address-card faks"></i>
+					<a class="lilf" href="{{asset('/home')}}"><i class="fa fa-address-card faks"></i></a>
 						<a class="lilf" href="{{asset('/home')}}">Account</a>
 					</li>
 				</ul>

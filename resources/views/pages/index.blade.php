@@ -63,7 +63,7 @@
         <div class="col-xl-12 lign-items-center">
         <div class="slider_text text-center justify-content-center">
             <h3><i class="fa fa-map-marker-alt text-info"></i>FIND YOUR SHOOT LOCATION</h3>
-            <p>The place to be for producers & more </p>
+            <p>The place to be for media professionals </p>
         </div>
             <div class="property_form">
                

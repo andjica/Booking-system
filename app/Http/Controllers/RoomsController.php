@@ -56,9 +56,9 @@ class RoomsController extends Controller
 
         if(request()->value)
         {
-        $val = request()->value;
-        $subcities = City::where('country_id', $val)->get();
-        return response()->json(['val' => $val, 'subcities' => $subcities])->header("Access-Control-Allow-Origin",  "*");
+            $val = request()->value;
+            $subcities = City::where('country_id', $val)->get();
+            return response()->json(['val' => $val, 'subcities' => $subcities])->header("Access-Control-Allow-Origin",  "*");
         }
 
         return view('renter.add-room', compact('r', 'count', 'countries','account', 'categories'));

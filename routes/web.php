@@ -30,7 +30,7 @@ Route::get('/', function () {
 Route::post('/checkdates','RoomsController@checkdates');
 Route::post('/reservate','RoomsController@reservate');
 //user blade for paying reservation
-Route::get('/res/{id}', 'ReservationController@payforroom')->name('res/id');
+Route::get('/res/{id}', 'ReservationController@payforroom');
 
 
 //admin za upravljanje aprtmanima

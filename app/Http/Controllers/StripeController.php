@@ -18,14 +18,14 @@ class StripeController extends Controller
     {
         $username = auth()->user()->name;
         $useremail = auth()->user()->email;
-
+        $token = $_POST['stripeToken'];
         $stripe = new \Stripe\StripeClient(
-            'sk_test_51H7RGVB5ujVuhswn6VfWB04gierKYQdsdxrStYoESa8xtRgEZ3ahkPRXWbIrZYgGDAQOsaTdM8HxzCF5YLuzCMc7009IUTjEkk'
+            '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'
           );
           $stripe->charges->create([
             'amount' => 100000,
             'currency' => 'EUR',
-            'source' => 'tok_amex',
+            'source' => $token,
             'description' => 'Your user with name: '.$username.' and email: '.$useremail. 'has already bought a Business Pro Account',
           ]);
 
@@ -53,14 +53,14 @@ class StripeController extends Controller
     {
         $username = auth()->user()->name;
         $useremail = auth()->user()->email;
-
+        $token = $_POST['stripeToken'];
         $stripe = new \Stripe\StripeClient(
-            'sk_test_51H7RGVB5ujVuhswn6VfWB04gierKYQdsdxrStYoESa8xtRgEZ3ahkPRXWbIrZYgGDAQOsaTdM8HxzCF5YLuzCMc7009IUTjEkk'
+            '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'
           );
           $stripe->charges->create([
             'amount' => 200000,
             'currency' => 'EUR',
-            'source' => 'tok_amex',
+            'source' =>  $token ,
             'description' => 'Your user with name: '.$username.' and email: '.$useremail. 'has already bought a Business Exclusive Account',
           ]);
 
@@ -94,15 +94,15 @@ class StripeController extends Controller
         $room  = Room::find($room_id);
 
         $res = Reservation::find($reservationid);
-
+        $token = $_POST['stripeToken'];
         $stripe = new \Stripe\StripeClient(
-            'sk_test_51H7RGVB5ujVuhswn6VfWB04gierKYQdsdxrStYoESa8xtRgEZ3ahkPRXWbIrZYgGDAQOsaTdM8HxzCF5YLuzCMc7009IUTjEkk'
+            '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'
             
           );
           $stripe->charges->create([
-            'amount' => $price."00",
+            'amount' => 100,
             'currency' => 'EUR',
-            'source' => 'tok_amex',
+            'source' => $token,
             'description' => 'Your user with name: '.$username.' and information: email '.$useremail.', phone number: '.$phone.
             ' from '.$country.' has already made reservation for '.$room->name.' in date between '.$res->start_date. ' and '
             .$res->valid_until. 'go to check on this link whole reservation '.'http://localhost/res/public/home'

@@ -43,7 +43,7 @@
                                     Services
                             </h3>
                             <ul>
-                                <li><a href="{{asset('/all')}}"> locations</a></li>
+                                <li><a href="{{asset('/all')}}"> Locations</a></li>
                                 <li><a href="{{asset('/')}}">Search Locations</a></li>
                                 <li><a href="{{asset('/home')}}">My Account</a></li>
                                 <li><a href="{{asset('/login')}}">Login & Register</a></li>
@@ -58,9 +58,10 @@
                                     Partner program
                             </h3>
                             <ul>
-                                <li><a href="{{asset('/about')}}">About</a></li>
+                                <li><a href="{{asset('/about')}}"> About</a></li>
                                 <li><a href="{{asset('/contact')}}"> Contact</a></li>
-                                <li><a href="{{asset('/contact')}}">Appointment</a></li>
+                                <li><a href="{{asset('/contact')}}"> Privacy</a></li>
+                                <li><a href="{{asset('/contact')}}"> Legal rights</a></li>
                             </ul>
                         </div>
                     </div>
@@ -71,9 +72,8 @@
                             </h3>
                             <ul>
                                 <li><a href="{{asset('/about')}}">About</a></li>
-                                <li><a href="{{asset('/register')}}">Become a renter</a></li>
+                                <li><a href="{{asset('/register')}}">Become a Hoster</a></li>
                                 <li><a href="{{asset('/contact')}}"> Contact</a></li>
-                                <li><a href="{{asset('/contact')}}">Appointment</a></li>
                             </ul>
                         </div>
                     </div>
@@ -125,18 +125,18 @@ Copyright WMC Locations All rights reserved | developed by DFAM Digital Agency
 
 
     <!--contact js-->
-    <script src="{{asset('/')}}js/contact.js"></script>
-    <script src="{{asset('/')}}js/jquery.ajaxchimp.min.js"></script>
-    <script src="{{asset('/')}}js/jquery.form.js"></script>
-    <script src="{{asset('/')}}js/jquery.validate.min.js"></script>
-    <script src="{{asset('/')}}js/mail-script.js"></script>
+    <script src="{{asset('/')}}/js/contact.js"></script>
+    <script src="{{asset('/')}}/js/jquery.ajaxchimp.min.js"></script>
+    <script src="{{asset('/')}}/js/jquery.form.js"></script>
+    <script src="{{asset('/')}}/js/jquery.validate.min.js"></script>
+    <script src="{{asset('/')}}/js/mail-script.js"></script>
 
 
-    <script src="{{asset('/')}}js/main.js"></script>
-    <script src="{{asset('/')}}js/city-search.js"></script>
+    <script src="{{asset('/')}}/js/main.js"></script>
+    <script src="{{asset('/')}}/js/city-search.js"></script>
 
 	<!-- JQUERY STEP -->
-	<script src="{{asset('/')}}js/jquery.steps.js"></script>
+	<script src="{{asset('/')}}/js/jquery.steps.js"></script>
 
 	<!-- DATE-PICKER -->
 {{--	<script src="{{asset('/')}}booker/vendor/date-picker/js/datepicker.js"></script>--}}
@@ -220,13 +220,13 @@ Copyright WMC Locations All rights reserved | developed by DFAM Digital Agency
             });
         </script>
     <script src="https://cdn.jsdelivr.net/npm/select2@4.0.12/dist/js/select2.min.js"></script>
-    <script src="{{asset('/')}}js/select2.js"></script>
+    <script src="{{asset('/')}}/js/select2.js"></script>
     <script src="{{asset('/')}}js/roomscripts.js"></script>
   
        
   
         
-	<script src="{{asset('/')}}js/main.js"></script>
+	<script src="{{asset('/')}}/js/main.js"></script>
     
     <script>
         function collision($div1, $div2) {

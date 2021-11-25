@@ -23,7 +23,7 @@
 <section class="mb-4">
 
     <!--Section heading-->
-    <h2 class="h1-responsive font-weight-bold text-center my-4">Contact Admin and Support Team <img src="{{asset('/img/')}}/logo2.png" class="img-fluid" width="250px"></h2>
+    <h2 class="h1-responsive font-weight-bold text-center my-4">Contact Admin and Support Team </h2>
     <!--Section description-->
     <p class="text-center w-responsive mx-auto mb-5">Do you have any questions? Please do not hesitate to contact us directly. Our team will come back to you within
         a matter of hours to help you.</p>
@@ -109,12 +109,12 @@
                 <p>World Media Crew Locations</p>
             </li>
 
-            <li><i class="fa fa-whatsapp mt-4 fa-2x text-info"></i>
-                <p>+31 6 42213877 </p>
+            <li><i class="fa fa-phone mt-4 fa-2x text-info"></i>
+            <p>+31 850070657 </p>
             </li>
 
             <li><i class="fa fa-envelope mt-4 fa-2x text-info"></i>
-                <p>info@worldmediacrew.com</p>
+                <p style="font-size:12px;">support@wmclocations.com</p>
             </li>
         </ul>
     </div>

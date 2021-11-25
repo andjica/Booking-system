@@ -49,7 +49,21 @@ $(document).ready(function () {
                 room = response.roomid;
                 resid = response.resid;
                 console.log(resid);
-                window.location.href = 'http://dfambusiness.com/boeking/public/res/'+resid;
+                //alert(resid);
+                /*alert('https://wmclocations.com/public/res/'+resid);*/
+
+                //window.location = 'https://wmclocations.com/public/res/'+resid;
+
+                /*linkout ="https://wmclocations.com/public/res/"+resid;
+                if(window.location.href == linkout)
+                    {
+                        location.reload();
+                    }
+                    else
+                    {
+                       alert(5);
+                    }*/
+                window.location = '/res/' + resid;
             }
         })
     })

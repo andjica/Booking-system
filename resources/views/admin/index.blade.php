@@ -14,8 +14,8 @@
                 </div>
                 @endif
 
-                    You are logged in!</h1>
-            <div class="btn-toolbar mb-2 mb-md-0">
+                    Welcome to your Dashboard</h1>
+            <!--<div class="btn-toolbar mb-2 mb-md-0">
               <div class="btn-group mr-2">
                 <button class="btn btn-sm btn-outline-secondary">Share</button>
                 <button class="btn btn-sm btn-outline-secondary">Export</button>
@@ -24,7 +24,7 @@
                 <span data-feather="calendar"></span>
             
               </button>
-            </div>
+            </div>-->
           </div>
           <div class="row justify-content-center p-5 bg-light">
            <form class="form-inline" method="GET" action="{{route('search-by-name')}}">

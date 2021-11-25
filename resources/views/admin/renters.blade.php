@@ -27,11 +27,11 @@
                     <tr>
                     <th scope="col">#ID</th>
                     <th scope="col">Company <Br>name</th>
-                    <th scope="col">Name of <br>employeed</th>
+                    <th scope="col">Name of <br>employees</th>
                     <th scope="col">Email</th>
                     <th scope="col">Iban</th>
                     <th scope="col">Address</th>
-                    <th scope="col">Nummber of  <br>created rooms</th>
+                    <th scope="col">Number of  <br>created Locations</th>
                     <th scope="col">Number of <br>succeessfull<br> booked reservation </th>
                     <th scope="col"><i class="fas fa-hammer"></i> &nbsp;Manage </th>
                     </tr>

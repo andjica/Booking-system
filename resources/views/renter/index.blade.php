@@ -6,7 +6,7 @@
       <div class="row">
       @include('renter.sidebar')
 
-        <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+        <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4 ets">
           <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
             <h1 class="h2">@if(session('success'))
                 <div class="alert alert-warning">
@@ -14,8 +14,8 @@
                 </div>
                 @endif
 
-                    You are logged in!</h1>
-            <div class="btn-toolbar mb-2 mb-md-0">
+                   Welcome to your Dashboard</h1>
+            <!--<div class="btn-toolbar mb-2 mb-md-0">
               <div class="btn-group mr-2">
                 <button class="btn btn-sm btn-outline-secondary">Share</button>
                 <button class="btn btn-sm btn-outline-secondary">Export</button>
@@ -24,10 +24,10 @@
                 <span data-feather="calendar"></span>
             
               </button>
-            </div>
+            </div>-->
           </div>
 
-        <div class="row justify-content-center mt-5 pb-5 border-bottom">
+        <div class="row justify-content-center mt-5 pb-5 border-bottom ">
                 <div class="col-md-4">
                 <div class="card text-center">
                     <div class="card-header ">
@@ -133,7 +133,13 @@
          margin-top:150px;
          margin-bottom:100px;
      }
-    </style>
+        @media screen and (min-width:968px){
+          .ets{
+            margin-top: -53px;
+          }
+        }
+</style>
+
 @endsection
 
 
